@@ -1,10 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Manrope } from "next/font/google";
 import "./globals.css";
+import "./premium.css";
 import { site } from "@/src/config/site";
 import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
 import { MobileCta } from "@/src/components/layout/MobileCta";
+import { RouteExperience } from "@/src/components/layout/RouteExperience";
 
 const heading = Barlow_Condensed({
   variable: "--font-heading",
@@ -27,13 +29,39 @@ export const metadata: Metadata = {
   authors: [{ name: site.name }],
   creator: site.name,
   publisher: site.name,
+  category: "Otomotiv ve yol yardım",
+  keywords: [
+    "Bahçelievler oto çekici",
+    "Bahçelievler oto kurtarma",
+    "7/24 oto çekici",
+    "en yakın çekici",
+    "yol yardım",
+    "Şirinevler oto çekici",
+    "Yenibosna oto çekici",
+    "Siyavuşpaşa oto çekici",
+    "Bakırköy oto çekici",
+    "Bağcılar oto çekici",
+    "E-5 oto çekici",
+    "TEM oto çekici",
+    "Basın Ekspres yol yardım",
+  ],
   formatDetection: { telephone: false },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg", apple: "/apple-touch-icon.png" },
   manifest: "/manifest.webmanifest",
   verification: site.googleVerification ? { google: site.googleVerification } : undefined,
+  appleWebApp: { capable: true, title: site.shortName, statusBarStyle: "black-translucent" },
+  other: { "geo.region": "TR-34", "geo.placename": "Bahçelievler, İstanbul" },
 };
 
-export const viewport: Viewport = { themeColor: "#07111B", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f2f1ec" },
+    { media: "(prefers-color-scheme: dark)", color: "#111315" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -42,10 +70,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <a className="skip-link" href="#main-content">
           Ana içeriğe geç
         </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <MobileCta />
+        <RouteExperience>
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <MobileCta />
+        </RouteExperience>
       </body>
     </html>
   );

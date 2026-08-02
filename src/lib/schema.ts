@@ -8,6 +8,7 @@ export function safeJsonLd(data: unknown) {
 
 export function homeSchema() {
   const businessId = `${site.url}/#business`;
+  const profiles = [site.googleBusinessUrl, site.instagramUrl].filter(Boolean);
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -16,7 +17,20 @@ export function homeSchema() {
         "@id": `${site.url}/#organization`,
         name: site.name,
         url: site.url,
-        logo: `${site.url}${site.logoOriginal}`,
+        logo: {
+          "@type": "ImageObject",
+          url: `${site.url}${site.logoOriginal}`,
+          contentUrl: `${site.url}${site.logoOriginal}`,
+          caption: "İnci Oto Çekici logosu",
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: site.phoneE164,
+          contactType: "customer service",
+          availableLanguage: ["Turkish"],
+          areaServed: "TR-34",
+        },
+        ...(profiles.length ? { sameAs: profiles } : {}),
       },
       {
         "@type": "AutomotiveBusiness",
@@ -26,6 +40,8 @@ export function homeSchema() {
         image: `${site.url}${site.logoOriginal}`,
         logo: `${site.url}${site.logoOriginal}`,
         telephone: site.phoneE164,
+        parentOrganization: { "@id": `${site.url}/#organization` },
+        knowsLanguage: ["tr"],
         address: {
           "@type": "PostalAddress",
           streetAddress: "Kana Sokak No:14/3",
@@ -48,6 +64,11 @@ export function homeSchema() {
             itemOffered: { "@type": "Service", name: service.title },
           })),
         },
+        potentialAction: {
+          "@type": "CommunicateAction",
+          target: `tel:${site.phoneE164}`,
+          name: "Yol yardım hattını ara",
+        },
       },
       {
         "@type": "WebSite",
@@ -56,6 +77,7 @@ export function homeSchema() {
         name: site.name,
         inLanguage: "tr-TR",
         publisher: { "@id": `${site.url}/#organization` },
+        copyrightHolder: { "@id": `${site.url}/#organization` },
       },
       {
         "@type": "WebPage",
@@ -64,6 +86,11 @@ export function homeSchema() {
         name: "Bahçelievler Oto Çekici ve 7/24 Yol Yardım",
         isPartOf: { "@id": `${site.url}/#website` },
         about: { "@id": businessId },
+        publisher: { "@id": `${site.url}/#organization` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${site.url}${site.ogImage}`,
+        },
         inLanguage: "tr-TR",
       },
     ],
@@ -95,15 +122,26 @@ export function faqSchema(items: readonly { question: string; answer: string }[]
   };
 }
 
-export function serviceSchema(name: string, path: string) {
+export function serviceSchema(name: string, path: string, description?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${site.url}${path}#service`,
     name,
+    description,
     serviceType: name,
     url: `${site.url}${path}`,
     provider: { "@type": "AutomotiveBusiness", "@id": `${site.url}/#business`, name: site.name },
-    areaServed: locations.map((location) => location.name),
+    areaServed: locations.map((location) => ({ "@type": "Place", name: location.name })),
+    availableChannel: {
+      "@type": "ServiceChannel",
+      servicePhone: {
+        "@type": "ContactPoint",
+        telephone: site.phoneE164,
+        availableLanguage: ["Turkish"],
+      },
+      serviceUrl: `${site.url}${path}`,
+    },
   };
 }
 
@@ -117,6 +155,8 @@ export function webPageSchema(name: string, path: string, description: string) {
     inLanguage: "tr-TR",
     isPartOf: { "@type": "WebSite", "@id": `${site.url}/#website` },
     about: { "@type": "AutomotiveBusiness", "@id": `${site.url}/#business` },
+    publisher: { "@type": "Organization", "@id": `${site.url}/#organization` },
+    primaryImageOfPage: { "@type": "ImageObject", url: `${site.url}${site.ogImage}` },
   };
 }
 
@@ -126,8 +166,10 @@ export function articleSchema(name: string, path: string, description: string) {
     "@type": "Article",
     headline: name,
     description,
-    mainEntityOfPage: `${site.url}${path}`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${site.url}${path}` },
     inLanguage: "tr-TR",
+    isAccessibleForFree: true,
+    image: `${site.url}${site.ogImage}`,
     author: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name },
     publisher: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name },
   };

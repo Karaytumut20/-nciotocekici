@@ -9,7 +9,6 @@ import {
   CheckCircle2,
   Clock3,
   MapPin,
-  MessageCircle,
   Navigation,
   Route,
   ShieldCheck,
@@ -43,46 +42,45 @@ const actionCards = [
 export default function Home() {
   return (
     <>
-      <section className="hero">
-        <div className="hero-road" aria-hidden="true" />
+      <section className="hero hero-premium">
         <div className="shell hero-grid">
           <div className="hero-copy">
             <span className="eyebrow">
               <span className="status-dot" />
-              7/24 Telefonla Ulaşılabilir
+              Bahçelievler / İstanbul
             </span>
             <h1>
-              Bahçelievler Oto Çekici ve <em>7/24 Yol Yardım</em>
+              Bahçelievler oto çekici. <em>Yolda kaldığınızda işi uzatmayız.</em>
             </h1>
             <p>
-              İnci Oto Çekici; Bahçelievler, Şirinevler, Yenibosna ve çevresinde oto çekici, araç kurtarma, akü takviye
-              ve yol yardım hizmeti sunar.
+              İnci Oto Çekici; Bahçelievler, Şirinevler, Yenibosna ve çevresinde 7/24 araç çekme, oto kurtarma, akü
+              takviye ve yol yardım iletişimi sunar.
             </p>
             <div className="button-row">
               <CallButton />
               <WhatsAppButton />
             </div>
-            <ul className="trust-row">
-              <li>
-                <Clock3 />7 Gün 24 Saat
-              </li>
-              <li>
-                <MapPin />
-                Bahçelievler ve Çevresi
-              </li>
-              <li>
-                <Car />
-                Otomobil ve Hafif Ticari
-              </li>
-              <li>
-                <MessageCircle />
-                Konuma Göre Bilgilendirme
-              </li>
-            </ul>
+            <div className="hero-proof" aria-label="Hizmet özeti">
+              <span>
+                <strong>7/24</strong>
+                Kesintisiz iletişim
+              </span>
+              <span>
+                <strong>Tek merkez</strong>
+                Bahçelievler çıkışlı
+              </span>
+              <span>
+                <strong>Doğrudan</strong>
+                Telefon ve WhatsApp
+              </span>
+            </div>
           </div>
           <div className="hero-visual">
+            <span className="hero-visual-number" aria-hidden="true">
+              24
+            </span>
             <div className="logo-card">
-              <span className="logo-orbit" aria-hidden="true" />
+              <span className="logo-card-label">İNCİ / RECOVERY UNIT / BAHÇELİEVLER</span>
               <Image
                 src={site.logo}
                 alt="İnci Oto Çekici Bahçelievler 7/24 Yol Yardım"
@@ -101,6 +99,15 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="hero-service-line" aria-hidden="true">
+          <span>OTO ÇEKİCİ</span>
+          <i>•</i>
+          <span>YOL YARDIM</span>
+          <i>•</i>
+          <span>OTO KURTARMA</span>
+          <i>•</i>
+          <span>AKÜ TAKVİYE</span>
         </div>
       </section>
       <section className="quick-actions">

@@ -121,51 +121,59 @@ export function Header() {
           </div>
         </div>
       </div>
-      {open && (
+      <div
+        className="drawer-backdrop"
+        data-state={open ? "open" : "closed"}
+        aria-hidden={!open}
+        onMouseDown={(event) => {
+          if (event.currentTarget === event.target) setOpen(false);
+        }}
+      >
         <div
-          className="drawer-backdrop"
-          onMouseDown={(event) => {
-            if (event.currentTarget === event.target) setOpen(false);
-          }}
+          ref={drawer}
+          id="mobile-menu"
+          className="drawer"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobil menü"
+          inert={!open}
         >
-          <div ref={drawer} id="mobile-menu" className="drawer" role="dialog" aria-modal="true" aria-label="Mobil menü">
-            <div className="drawer-head">
-              <span>Menü</span>
-              <button type="button" onClick={() => setOpen(false)} aria-label="Menüyü kapat">
-                <X />
-              </button>
-            </div>
-            <nav aria-label="Mobil ana menü">
-              {links.map(([label, href]) => (
-                <Link key={href} href={href} onClick={() => setOpen(false)}>
-                  {label}
-                </Link>
-              ))}
-              <details>
-                <summary>Hizmetler</summary>
-                <div>
-                  {services.map((item) => (
-                    <Link key={item.slug} href={`/hizmetler/${item.slug}`} onClick={() => setOpen(false)}>
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
-              </details>
-              <details>
-                <summary>Hizmet Bölgeleri</summary>
-                <div>
-                  {locations.slice(0, 12).map((item) => (
-                    <Link key={item.slug} href={`/bolgeler/${item.slug}`} onClick={() => setOpen(false)}>
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </details>
-            </nav>
-            <CallButton />
+          <div className="drawer-head">
+            <span>Menü</span>
+            <button type="button" onClick={() => setOpen(false)} aria-label="Menüyü kapat">
+              <X />
+            </button>
           </div>
+          <nav aria-label="Mobil ana menü">
+            {links.map(([label, href]) => (
+              <Link key={href} href={href} onClick={() => setOpen(false)}>
+                {label}
+              </Link>
+            ))}
+            <details>
+              <summary>Hizmet kataloğu</summary>
+              <div>
+                {services.map((item) => (
+                  <Link key={item.slug} href={`/hizmetler/${item.slug}`} onClick={() => setOpen(false)}>
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+            </details>
+            <details>
+              <summary>Bölge listesi</summary>
+              <div>
+                {locations.slice(0, 12).map((item) => (
+                  <Link key={item.slug} href={`/bolgeler/${item.slug}`} onClick={() => setOpen(false)}>
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </details>
+          </nav>
+          <CallButton />
         </div>
-      )}
+      </div>
     </header>
   );
 }

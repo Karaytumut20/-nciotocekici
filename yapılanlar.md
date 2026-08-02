@@ -231,8 +231,10 @@ GA4 kimliği verilmediği için üçüncü taraf analiz scripti veya onaysız ç
 - `npm run lint`: başarılı
 - `npm run build`: başarılı
 - Sunucu HTML testi: 2/2 başarılı
-- Playwright: 14/14 başarılı
+- Playwright: 18/18 başarılı
 - Mobil menü açma, ESC, focus trap ve focus geri dönüşü: başarılı
+- Mobil menünün yumuşak açılış ve kapanış animasyonu: başarılı
+- Route değişiminde loading, yeni sayfayı en üste alma ve geçişi tamamlama: başarılı
 - Telefon CTA ve WhatsApp URL kontrolü: başarılı
 - Canonical, title, description ve tek H1 kontrolü: başarılı
 - JSON-LD parse kontrolü: başarılı
@@ -278,6 +280,8 @@ Yayın öncesinde dışarıdan sağlanması gereken bilgiler ve doğrulamalar i�
 
 ## 18. Açık tonlu UI/UX yenilemesi
 
+Bu ara tasarım, aşağıdaki endüstriyel-editoryal tasarım sistemiyle yeniden ele alınarak güncellendi.
+
 - Arayüzdeki yoğun lacivert ve sarı kullanımı kaldırıldı; verilen logo marka varlığı olarak özgün hâliyle korundu.
 - Sıcak kırık beyaz, açık taş grisi, kömür rengi, ölçülü kiremit ve WhatsApp için doğal yeşilden oluşan yeni renk sistemi kuruldu.
 - Koyu, parlak ve yapay görünen yüzeyler; glow efektleri, dekoratif grid, yol çizgisi ve dönen logo halkası kaldırıldı.
@@ -289,3 +293,25 @@ Yayın öncesinde dışarıdan sağlanması gereken bilgiler ve doğrulamalar i�
 - Telefon ana aksanı kiremit, WhatsApp aksanı doğal yeşil olarak ayrıştırıldı; butonlarda glow kullanılmadı.
 - İçerik, route yapısı, canonical URL’ler, yapılandırılmış veri ve SEO metinleri değiştirilmedi.
 - Yenileme sonrası typecheck, lint, Prettier, production build ve 14/14 Playwright testi yeniden başarılı oldu.
+
+## 19. Endüstriyel-editoryal premium tasarım ve SEO genişletmesi
+
+- Sitenin tamamı çekici sektörüne uygun porselen beyazı, kömür siyahı, çelik grisi ve sinyal kırmızısı paletiyle yeniden tasarlandı.
+- Lacivert ve sarı arayüz rengi kullanılmadı; bu renkler yalnızca kullanıcı tarafından verilen özgün logo görselinin içinde kaldı.
+- Ana sayfada asimetrik endüstriyel hero, büyük tipografi, operasyon etiketi, 7/24 hizmet özeti ve servis şeridi oluşturuldu.
+- Hizmetler bento düzene; süreç, bölgeler, ana yollar, iletişim ve FAQ bölümleri daha güçlü editoryal ritme geçirildi.
+- İç sayfa hero alanları, içerik kartları, link dizinleri, formlar, 404 ve footer aynı premium tasarım sistemine bağlandı.
+- Tüm gölgeler, köşe yarıçapları, hover hareketleri ve bölüm sınırları daha ölçülü ve tutarlı hâle getirildi.
+- 360 px’e kadar mobil düzen, safe-area alt CTA, dokunma alanları ve yatay taşma yeniden kontrol edildi.
+- Mobil drawer sürekli DOM’da tutularak açılış ve kapanışta aynı yumuşak hareket eğrisi kullanıldı; arka plan bulanıklığı da kademeli çalışıyor.
+- Sayfa bağlantısına basıldığı anda görünen sade loading ekranı eklendi.
+- Yeni route hazır olduğunda sayfa önce kesin olarak en üste alınır; ardından loading ekranı yumuşak biçimde kapanır.
+- Kullanıcının hareket azaltma tercihi loading ve drawer animasyonlarında desteklenir.
+- Canonical yanında `tr-TR` ve `x-default` dil alternatifleri eklendi.
+- Googlebot için geniş görsel önizleme, sınırsız metin snippet’i ve video önizleme direktifleri eklendi.
+- Global anahtar kelime kümesi, otomotiv kategorisi, İstanbul bölge meta bilgisi ve Apple web uygulaması bilgileri eklendi.
+- Organization, AutomotiveBusiness, WebSite, WebPage, Service ve Article yapılandırılmış verileri; iletişim noktası, hizmet kanalı, yayıncı, ana görsel ve bölge varlıklarıyla genişletildi.
+- Doğrulanmış sosyal profil olmadığında `sameAs` üretilmemesi korundu; sahte fiyat, puan, koordinat, şube veya yorum eklenmedi.
+- Yeni tasarımla uyumlu, tam telefon ve ana hizmet metni içeren 1200×630 Open Graph görseli hazırlandı ve metadata’ya bağlandı.
+- SEO testlerine robots/googlebot, hreflang ve yeni Open Graph görsel doğrulaması eklendi.
+- Typecheck, lint, Prettier, production build ve 18/18 mobil/masaüstü Playwright testi başarılı oldu.

@@ -151,7 +151,7 @@ export function ServicePage({ service }: { service: Service }) {
       </section>
       <FaqSection items={localFaqs} title={`${service.title} hakkında sorular`} />
       <FinalCta />
-      <JsonLd data={serviceSchema(service.title, `/hizmetler/${service.slug}`)} />
+      <JsonLd data={serviceSchema(service.title, `/hizmetler/${service.slug}`, service.summary)} />
       <JsonLd data={webPageSchema(service.title, `/hizmetler/${service.slug}`, service.summary)} />
     </>
   );
