@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="İnci Çekici ikonu">
+  <rect width="64" height="64" rx="14" fill="#07111B"/>
+  <path d="M13 5h38l8 8v38l-8 8H13l-8-8V13z" fill="none" stroke="#F5B400" stroke-width="4"/>
+  <text x="32" y="41" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="800" fill="#F8FAFC">İÇ</text>
+</svg>
+
