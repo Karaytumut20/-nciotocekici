@@ -4,6 +4,8 @@ Son güncelleme: 2 Ağustos 2026
 
 Kod, istenen sayfalar, SEO altyapısı ve otomatik testler tamamlandı. Aşağıdaki maddeler yazılımdaki yarım işler değil; kullanıcı tarafından verilmemiş, doğrulanması gereken işletme bilgileri veya canlı yayın sonrasında yapılabilen dış servis işlemleridir.
 
+Özel test yayını hazırdır: https://inci-oto-cekici.umutkaraytu.chatgpt.site
+
 ## 1. Doğrulanmış işletme ve harita bilgileri
 
 - Google Maps işletme/pin bağlantısı verilmedi.
@@ -63,6 +65,8 @@ GOOGLE_SITE_VERIFICATION=
 - Backend formu, pazarlama onayı veya yeni takip teknolojisi eklenirse metinler ve consent akışı güncellenmelidir.
 
 ## 6. Canlı domain ve hosting işlemleri
+
+Site owner-only özel erişimle Sites üzerinde yayınlandı. Geçici yayın adresi `https://inci-oto-cekici.umutkaraytu.chatgpt.site` şeklindedir. Aşağıdaki maddeler işletmenin gerçek domainine geçiş için gereklidir.
 
 Yayın ortamında tamamlanması gerekenler:
 
@@ -134,4 +138,3 @@ Gerçek `.env` dosyası repoya eklenmemelidir.
 - Gerçek mobil cihazda 360–430 px aralığında telefon/WhatsApp alt barını test edin.
 - WhatsApp hazır mesajındaki Türkçe karakterleri ve konum paylaşım akışını kontrol edin.
 - İşletme bilgilerindeki gelecekteki her değişikliği önce `src/config/site.ts` ve environment değerlerinde merkezi olarak güncelleyin.
-

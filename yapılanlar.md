@@ -2,6 +2,8 @@
 
 Son güncelleme: 2 Ağustos 2026
 
+Özel test yayını: https://inci-oto-cekici.umutkaraytu.chatgpt.site
+
 Bu dosya, verilen ana proje promptuna göre tamamlanan işleri ve doğrulama sonuçlarını özetler. Harici bilgi veya işletme onayı bekleyen maddeler `eksikler.md` dosyasındadır.
 
 ## 1. Proje ve teknoloji
@@ -267,3 +269,9 @@ Lighthouse hedefleri laboratuvar hedefidir; canlı hosting, ağ, cihaz ve gerçe
 
 Yayın öncesinde dışarıdan sağlanması gereken bilgiler ve doğrulamalar için `eksikler.md` dosyasına bakın.
 
+## 17. Yayın durumu
+
+- Doğrulanmış production build, owner-only özel erişimle Sites üzerine yayınlandı.
+- Geçici yayın adresi: https://inci-oto-cekici.umutkaraytu.chatgpt.site
+- Canlı işletme domaini `inciotocekici.com` henüz DNS üzerinden bağlanmadı.
+- Domain bağlantısı, Google Maps/İşletme Profili ve analiz doğrulamaları `eksikler.md` kontrol listesinde tutuluyor.
