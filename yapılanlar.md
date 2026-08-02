@@ -275,3 +275,17 @@ Yayın öncesinde dışarıdan sağlanması gereken bilgiler ve doğrulamalar i�
 - Geçici yayın adresi: https://inci-oto-cekici.umutkaraytu.chatgpt.site
 - Canlı işletme domaini `inciotocekici.com` henüz DNS üzerinden bağlanmadı.
 - Domain bağlantısı, Google Maps/İşletme Profili ve analiz doğrulamaları `eksikler.md` kontrol listesinde tutuluyor.
+
+## 18. Açık tonlu UI/UX yenilemesi
+
+- Arayüzdeki yoğun lacivert ve sarı kullanımı kaldırıldı; verilen logo marka varlığı olarak özgün hâliyle korundu.
+- Sıcak kırık beyaz, açık taş grisi, kömür rengi, ölçülü kiremit ve WhatsApp için doğal yeşilden oluşan yeni renk sistemi kuruldu.
+- Koyu, parlak ve yapay görünen yüzeyler; glow efektleri, dekoratif grid, yol çizgisi ve dönen logo halkası kaldırıldı.
+- Hero alanı daha sakin bir editoryal düzene geçirildi; logo açık renkli, ince çerçeveli bir yüzeyde sunuldu.
+- Başlıklarda yoğun büyük harf ve sıkıştırılmış yazı hissi azaltıldı; okunabilir Manrope tabanlı tipografik hiyerarşi getirildi.
+- Kart gölgeleri, köşe yarıçapları ve hover hareketleri sadeleştirildi.
+- Navigasyon sıcak beyaz, üst bilgi ve footer nötr kömür rengine taşındı.
+- Hizmet, bölge, yol yardım, blog, iletişim, yasal sayfalar ve 404 aynı yeni tasarım sistemiyle uyumlu hâle getirildi.
+- Telefon ana aksanı kiremit, WhatsApp aksanı doğal yeşil olarak ayrıştırıldı; butonlarda glow kullanılmadı.
+- İçerik, route yapısı, canonical URL’ler, yapılandırılmış veri ve SEO metinleri değiştirilmedi.
+- Yenileme sonrası typecheck, lint, Prettier, production build ve 14/14 Playwright testi yeniden başarılı oldu.

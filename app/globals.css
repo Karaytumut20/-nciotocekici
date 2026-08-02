@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #07111b;
-  --navy-2: #0d1b2a;
-  --card: #122232;
-  --yellow: #f5b400;
-  --yellow-hover: #ffc62b;
-  --white: #f8fafc;
-  --gray: #d7dee7;
-  --muted: #9eabb9;
-  --green: #22c55e;
+  --navy: #f4f1ea;
+  --navy-2: #ebe7de;
+  --card: #fffdf9;
+  --yellow: #c45234;
+  --yellow-hover: #a94229;
+  --white: #20282b;
+  --gray: #526066;
+  --muted: #6b767a;
+  --green: #28685b;
   --error: #ef4444;
-  --line: rgba(215, 222, 231, 0.12);
-  --shadow: 0 24px 70px rgba(2, 8, 15, 0.3);
+  --line: rgba(32, 40, 43, 0.14);
+  --shadow: 0 14px 32px rgba(32, 40, 43, 0.08);
 }
 
 * {
@@ -1774,5 +1774,582 @@ p {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* 2026 light editorial redesign -------------------------------------------------
+   The supplied logo remains intact, while the interface deliberately steps away
+   from its navy/yellow palette. The UI uses warm paper tones, charcoal and a
+   restrained terracotta accent for a calmer, more local-service character. */
+
+html,
+body {
+  background: #f4f1ea;
+  color: #20282b;
+}
+
+body {
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand-text strong,
+.footer-brand strong {
+  font-family: var(--font-body), sans-serif;
+  font-style: normal;
+  letter-spacing: -0.035em;
+  text-transform: none;
+}
+
+::selection {
+  background: #c45234;
+  color: #fffaf4;
+}
+
+.topbar {
+  background: #30383a;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  color: #f8f5ef;
+}
+
+.topbar strong,
+.topbar a,
+.topbar .live-dot {
+  color: #f8f5ef;
+}
+
+.live-dot {
+  background: #75ad85;
+  box-shadow: none;
+}
+
+.navbar {
+  background: rgba(255, 253, 249, 0.94);
+  border-bottom-color: #ddd8ce;
+  box-shadow: 0 6px 22px rgba(32, 40, 43, 0.05);
+}
+
+.brand-text strong,
+.nav-links a,
+.nav-dropdown summary,
+.mobile-nav-button {
+  color: #20282b;
+}
+
+.brand-text small {
+  color: #6b767a;
+}
+
+.nav-links > a:hover,
+.nav-dropdown:hover > summary,
+.nav-links > a[aria-current="page"] {
+  color: #a94229;
+}
+
+.nav-dropdown-menu,
+.mobile-drawer {
+  background: #fffdf9;
+  border-color: #ddd8ce;
+  box-shadow: 0 18px 44px rgba(32, 40, 43, 0.12);
+}
+
+.mobile-drawer a,
+.mobile-drawer summary,
+.nav-dropdown-menu a {
+  color: #263034;
+}
+
+.mobile-drawer summary,
+.mobile-drawer a,
+.nav-dropdown-menu a + a {
+  border-color: #e8e3da;
+}
+
+.btn,
+.mobile-drawer a,
+.quick-action,
+.service-card,
+.feature-card,
+.testimonial-card,
+.info-card,
+.road-card,
+.form-card,
+.map-card,
+.contact-card,
+.location-list a,
+.article-card,
+.article-related a,
+.error-card {
+  border-radius: 10px;
+}
+
+.btn {
+  box-shadow: none;
+  font-weight: 750;
+}
+
+.btn-primary,
+.floating-phone,
+.mobile-cta .phone,
+.emergency-strip,
+.final-cta {
+  background: #c45234;
+  color: #fffaf4;
+}
+
+.btn-primary:hover,
+.floating-phone:hover,
+.mobile-cta .phone:hover {
+  background: #a94229;
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+.btn-secondary,
+.btn-ghost {
+  background: #fffdf9;
+  border-color: #cfc9be;
+  color: #20282b;
+}
+
+.btn-whatsapp,
+.floating-whatsapp,
+.mobile-cta .whatsapp {
+  background: #28685b;
+  color: #fff;
+}
+
+.btn-whatsapp:hover,
+.floating-whatsapp:hover,
+.mobile-cta .whatsapp:hover {
+  background: #1f574c;
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+.hero,
+.page-hero,
+.contact-section {
+  background: #f4f1ea;
+}
+
+.hero {
+  min-height: auto;
+  padding-block: clamp(4.5rem, 9vw, 7.5rem);
+}
+
+.hero::before,
+.page-hero::before,
+.contact-section::before,
+.logo-orbit,
+.hero-road {
+  display: none;
+}
+
+.hero-grid {
+  gap: clamp(2.5rem, 6vw, 6rem);
+}
+
+.hero h1,
+.page-hero h1 {
+  color: #20282b;
+  font-size: clamp(2.75rem, 6.7vw, 5.75rem);
+  font-weight: 760;
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+  text-shadow: none;
+}
+
+.hero h1 em,
+.page-hero h1 span {
+  color: #a94229;
+  font-style: normal;
+  text-shadow: none;
+}
+
+.hero-copy > p,
+.page-hero p,
+.section-heading p,
+.two-column-copy > p,
+.section-intro {
+  color: #526066;
+}
+
+.eyebrow {
+  color: #a94229;
+  font-size: 0.82rem;
+  letter-spacing: 0.045em;
+  text-transform: none;
+}
+
+.eyebrow::before {
+  background: #c45234;
+  box-shadow: none;
+}
+
+.hero-points li,
+.trust-item {
+  color: #465359;
+}
+
+.hero-points svg,
+.trust-item svg,
+.service-card svg,
+.feature-card svg,
+.quick-action svg,
+.contact-card svg,
+.info-card svg,
+.road-card svg {
+  color: #a94229;
+  filter: none;
+}
+
+.hero-actions {
+  gap: 0.75rem;
+}
+
+.hero-visual {
+  min-height: 430px;
+}
+
+.logo-card {
+  width: min(100%, 490px);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: #fffdf9;
+  border: 1px solid #d8d2c7;
+  border-radius: 16px;
+  box-shadow: 0 22px 52px rgba(32, 40, 43, 0.1);
+}
+
+.availability-card,
+.hero-chip {
+  background: #30383a;
+  border: 0;
+  color: #f8f5ef;
+  box-shadow: 0 12px 28px rgba(32, 40, 43, 0.12);
+}
+
+.availability-card strong,
+.availability-card span,
+.hero-chip strong,
+.hero-chip span {
+  color: inherit;
+}
+
+.quick-actions,
+.section,
+.services-section,
+.info-section,
+.blog-section,
+.faq-section {
+  background: #fffdf9;
+}
+
+.quick-action,
+.service-card,
+.feature-card,
+.testimonial-card,
+.info-card,
+.article-card,
+.contact-card,
+.road-card,
+.form-card,
+.map-card,
+.article-content,
+.error-card {
+  background: #fffdf9;
+  border-color: #ded8ce;
+  box-shadow: 0 8px 24px rgba(32, 40, 43, 0.045);
+}
+
+.quick-action:hover,
+.service-card:hover,
+.feature-card:hover,
+.info-card:hover,
+.article-card:hover,
+.location-list a:hover,
+.article-related a:hover {
+  border-color: #bfb7aa;
+  box-shadow: 0 13px 30px rgba(32, 40, 43, 0.07);
+  transform: translateY(-2px);
+}
+
+.quick-action strong,
+.service-card h3,
+.feature-card h3,
+.testimonial-card h3,
+.info-card h3,
+.article-card h3,
+.contact-card h3,
+.road-card h3,
+.form-card h2,
+.map-card h2,
+.article-content h2,
+.article-content h3 {
+  color: #20282b;
+}
+
+.quick-action span,
+.service-card p,
+.feature-card p,
+.testimonial-card p,
+.info-card p,
+.article-card p,
+.contact-card p,
+.road-card p,
+.article-content p,
+.article-content li {
+  color: #5d696e;
+}
+
+.section-muted,
+.feature-section,
+.testimonial-section,
+.locations-section {
+  background: #ebe7de;
+}
+
+.section-heading h2,
+.two-column-copy h2,
+.contact-copy h2,
+.final-cta h2 {
+  color: #20282b;
+  font-size: clamp(2rem, 4.3vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+  text-shadow: none;
+}
+
+.section-heading h2 span,
+.two-column-copy h2 span,
+.contact-copy h2 span {
+  color: #a94229;
+}
+
+.service-card::before,
+.feature-card::before,
+.article-card::before {
+  background: #c45234;
+  box-shadow: none;
+}
+
+.icon-box,
+.service-icon,
+.feature-icon,
+.quick-icon,
+.info-icon,
+.contact-icon,
+.road-icon {
+  background: #f3e4dd;
+  border-color: #e2c1b4;
+  color: #a94229;
+  box-shadow: none;
+}
+
+.emergency-strip {
+  border-block: 0;
+  box-shadow: none;
+}
+
+.emergency-strip h2,
+.emergency-strip p,
+.emergency-strip a {
+  color: #fffaf4;
+}
+
+.emergency-strip .btn {
+  background: #fffaf4;
+  border-color: #fffaf4;
+  color: #722b1d;
+}
+
+.road-section {
+  background: #ebe7de;
+}
+
+.road-section::before {
+  display: none;
+}
+
+.road-card {
+  color: #20282b;
+}
+
+.road-card strong,
+.road-card span {
+  color: inherit;
+}
+
+.location-list a,
+.article-related a {
+  background: #fffdf9;
+  border-color: #d8d2c7;
+  color: #354044;
+  box-shadow: none;
+}
+
+.location-list a::after,
+.article-related a::after,
+.text-link,
+.service-link,
+.article-card time {
+  color: #a94229;
+}
+
+.form-card input,
+.form-card textarea,
+.form-card select {
+  background: #f8f5ef;
+  border-color: #d4cec3;
+  color: #20282b;
+}
+
+.form-card input:focus,
+.form-card textarea:focus,
+.form-card select:focus {
+  border-color: #a94229;
+  box-shadow: 0 0 0 3px rgba(196, 82, 52, 0.12);
+}
+
+.form-card label,
+.form-card legend {
+  color: #354044;
+}
+
+.map-card iframe {
+  filter: grayscale(0.82) contrast(0.92);
+}
+
+.final-cta {
+  background-image: none;
+  box-shadow: none;
+}
+
+.final-cta h2,
+.final-cta p {
+  color: #fffaf4;
+}
+
+.final-cta .btn-primary {
+  background: #fffaf4;
+  color: #722b1d;
+}
+
+.page-hero {
+  border-bottom-color: #ded8ce;
+}
+
+.breadcrumb,
+.breadcrumb a {
+  color: #6b767a;
+}
+
+.breadcrumb span {
+  color: #a94229;
+}
+
+.article-content blockquote {
+  background: #f3e4dd;
+  border-left-color: #c45234;
+  color: #354044;
+}
+
+.faq-item,
+.faq-item + .faq-item {
+  border-color: #ded8ce;
+}
+
+.faq-item summary {
+  color: #20282b;
+}
+
+.faq-item p {
+  color: #5d696e;
+}
+
+.footer {
+  background: #2f3739;
+  border-top: 0;
+  color: #f8f5ef;
+}
+
+.footer h2,
+.footer h3,
+.footer-brand strong,
+.footer-bottom strong {
+  color: #f8f5ef;
+}
+
+.footer p,
+.footer a,
+.footer li,
+.footer-brand small,
+.footer-bottom {
+  color: #c5cdca;
+}
+
+.footer a:hover,
+.footer-contact svg {
+  color: #ee9b7e;
+}
+
+.footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.floating-actions a {
+  border: 3px solid #f4f1ea;
+  box-shadow: 0 8px 24px rgba(32, 40, 43, 0.18);
+}
+
+.mobile-cta {
+  background: rgba(47, 55, 57, 0.96);
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.mobile-nav-button {
+  background: #f4f1ea;
+  border-color: #d4cec3;
+}
+
+.skip-link {
+  background: #c45234;
+  color: #fffaf4;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding-block: 3.5rem 4.5rem;
+  }
+
+  .hero-visual {
+    min-height: 380px;
+  }
+
+  .mobile-drawer {
+    background: #fffdf9;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero h1,
+  .page-hero h1 {
+    font-size: clamp(2.45rem, 13vw, 3.75rem);
+  }
+
+  .hero-visual {
+    min-height: 315px;
+  }
+
+  .logo-card {
+    border-radius: 12px;
+  }
+
+  .availability-card,
+  .hero-chip {
+    box-shadow: 0 8px 20px rgba(32, 40, 43, 0.12);
   }
 }

@@ -4,6 +4,8 @@ Son güncelleme: 2 Ağustos 2026
 
 Kod, istenen sayfalar, SEO altyapısı ve otomatik testler tamamlandı. Aşağıdaki maddeler yazılımdaki yarım işler değil; kullanıcı tarafından verilmemiş, doğrulanması gereken işletme bilgileri veya canlı yayın sonrasında yapılabilen dış servis işlemleridir.
 
+Açık tonlu UI/UX yenilemesi tamamlandı ve otomatik testlerden geçti. Bu yenileme yeni bir yazılım eksiği oluşturmadı. Arayüzde daha fazla işletmeye özgü görsel karakter istenirse aşağıdaki gerçek çekici/ekip fotoğrafları sağlanmalıdır; yapay veya uydurma işletme fotoğrafı kullanılmadı.
+
 Özel test yayını hazırdır: https://inci-oto-cekici.umutkaraytu.chatgpt.site
 
 ## 1. Doğrulanmış işletme ve harita bilgileri
