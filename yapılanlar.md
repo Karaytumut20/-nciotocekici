@@ -315,3 +315,11 @@ Bu ara tasarım, aşağıdaki endüstriyel-editoryal tasarım sistemiyle yeniden
 - Yeni tasarımla uyumlu, tam telefon ve ana hizmet metni içeren 1200×630 Open Graph görseli hazırlandı ve metadata’ya bağlandı.
 - SEO testlerine robots/googlebot, hreflang ve yeni Open Graph görsel doğrulaması eklendi.
 - Typecheck, lint, Prettier, production build ve 18/18 mobil/masaüstü Playwright testi başarılı oldu.
+
+## 20. Tek font sistemi
+
+- Sıkıştırılmış Barlow Condensed fontu ve ilgili font dosyası tamamen kaldırıldı.
+- Navigasyon, hero, bölüm başlıkları, kartlar, butonlar, formlar, loading ekranı, mobil drawer ve gövde metinlerinde yalnızca Manrope kullanılıyor.
+- Büyük hero ve iç sayfa başlıklarının ölçü, satır yüksekliği ve harf aralığı Manrope’un doğal genişliğine göre yeniden dengelendi.
+- 360–390 px mobil ekranlarda uzun başlıkların okunabilir ve taşmasız kalması için responsive boyutlar düşürüldü.
+- Tek font değişikliği sonrasında typecheck, lint, Prettier, production build ve 18/18 mobil/masaüstü Playwright testi yeniden başarılı oldu.

@@ -4,7 +4,7 @@ Son güncelleme: 2 Ağustos 2026
 
 Kod, istenen sayfalar, SEO altyapısı ve otomatik testler tamamlandı. Aşağıdaki maddeler yazılımdaki yarım işler değil; kullanıcı tarafından verilmemiş, doğrulanması gereken işletme bilgileri veya canlı yayın sonrasında yapılabilen dış servis işlemleridir.
 
-Endüstriyel-editoryal UI/UX, yumuşak mobil menü, route loading sistemi ve ek teknik SEO çalışmaları tamamlandı. Bu yenileme yeni bir yazılım eksiği oluşturmadı. Arayüzde işletmeye ait gerçek hizmet fotoğrafları istenirse aşağıdaki gerçek çekici/ekip fotoğrafları sağlanmalıdır; işletmeye aitmiş gibi gösterilen yapay veya uydurma fotoğraf kullanılmadı.
+Endüstriyel-editoryal UI/UX, tek Manrope font sistemi, yumuşak mobil menü, route loading sistemi ve ek teknik SEO çalışmaları tamamlandı. Bu yenileme yeni bir yazılım eksiği oluşturmadı. Arayüzde işletmeye ait gerçek hizmet fotoğrafları istenirse aşağıdaki gerçek çekici/ekip fotoğrafları sağlanmalıdır; işletmeye aitmiş gibi gösterilen yapay veya uydurma fotoğraf kullanılmadı.
 
 Özel test yayını hazırdır: https://inci-oto-cekici.umutkaraytu.chatgpt.site
 

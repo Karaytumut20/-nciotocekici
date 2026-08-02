@@ -25,7 +25,16 @@ body {
 }
 
 body {
+  --font-heading: var(--font-body);
+  font-family: var(--font-body), system-ui, sans-serif;
   line-height: 1.62;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 main {
@@ -298,10 +307,10 @@ summary {
   margin: 0;
   color: #fff;
   font-family: var(--font-heading), sans-serif;
-  font-size: clamp(4.1rem, 7.8vw, 8.1rem);
+  font-size: clamp(3.8rem, 6.6vw, 6.9rem);
   font-weight: 800;
-  line-height: 0.83;
-  letter-spacing: -0.032em;
+  line-height: 0.93;
+  letter-spacing: -0.055em;
   text-transform: none;
 }
 
@@ -565,9 +574,9 @@ summary {
   max-width: 15ch;
   color: var(--ink);
   font-family: var(--font-heading), sans-serif;
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(2.7rem, 5vw, 4.8rem);
   font-weight: 800;
-  line-height: 0.92;
+  line-height: 1;
   letter-spacing: -0.045em;
   text-transform: none;
 }
@@ -989,8 +998,8 @@ summary {
   max-width: 13ch;
   color: #fff;
   font-family: var(--font-heading), sans-serif;
-  font-size: clamp(3rem, 6vw, 6rem);
-  line-height: 0.92;
+  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  line-height: 1;
 }
 
 .final-cta p {
@@ -1060,9 +1069,9 @@ summary {
   max-width: 14ch;
   color: #fff;
   font-family: var(--font-heading), sans-serif;
-  font-size: clamp(3.8rem, 8vw, 8rem);
+  font-size: clamp(3.25rem, 6.4vw, 6.5rem);
   font-weight: 800;
-  line-height: 0.88;
+  line-height: 0.96;
   letter-spacing: -0.045em;
   text-transform: none;
 }
@@ -1404,7 +1413,7 @@ summary {
 
   .hero-premium h1 {
     max-width: 10ch;
-    font-size: clamp(4.5rem, 13vw, 7rem);
+    font-size: clamp(3.7rem, 10.5vw, 5.7rem);
   }
 
   .hero-premium .hero-copy > p {
@@ -1590,9 +1599,9 @@ summary {
 
   .hero-premium h1 {
     max-width: 9.5ch;
-    font-size: clamp(3.45rem, 17.4vw, 5.2rem);
-    line-height: 0.89;
-    letter-spacing: -0.02em;
+    font-size: clamp(2.85rem, 12.4vw, 4rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
   }
 
   .hero-premium .hero-copy > p {
@@ -1676,7 +1685,7 @@ summary {
   .two-column h2,
   .contact-grid h2,
   .narrow h2 {
-    font-size: clamp(2.75rem, 14vw, 4.35rem);
+    font-size: clamp(2.35rem, 10.5vw, 3.6rem);
   }
 
   .service-grid,
@@ -1728,7 +1737,7 @@ summary {
   }
 
   .page-hero h1 {
-    font-size: clamp(3.2rem, 16vw, 5.2rem);
+    font-size: clamp(2.7rem, 12vw, 4.2rem);
   }
 
   .page-hero p {
@@ -1763,7 +1772,7 @@ summary {
   }
 
   .hero-premium h1 {
-    font-size: 3.25rem;
+    font-size: 2.75rem;
   }
 
   .drawer {

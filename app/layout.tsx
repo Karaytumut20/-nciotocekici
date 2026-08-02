@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow_Condensed, Manrope } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import "./premium.css";
 import { site } from "@/src/config/site";
@@ -8,12 +8,6 @@ import { Footer } from "@/src/components/layout/Footer";
 import { MobileCta } from "@/src/components/layout/MobileCta";
 import { RouteExperience } from "@/src/components/layout/RouteExperience";
 
-const heading = Barlow_Condensed({
-  variable: "--font-heading",
-  subsets: ["latin", "latin-ext"],
-  weight: ["600", "700", "800"],
-  display: "swap",
-});
 const body = Manrope({
   variable: "--font-body",
   subsets: ["latin", "latin-ext"],
@@ -66,7 +60,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="tr">
-      <body className={`${heading.variable} ${body.variable}`}>
+      <body className={body.variable}>
         <a className="skip-link" href="#main-content">
           Ana içeriğe geç
         </a>
