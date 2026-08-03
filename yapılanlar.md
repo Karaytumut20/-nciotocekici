@@ -24,7 +24,7 @@ Bu dosya, verilen ana proje promptuna göre tamamlanan işleri ve doğrulama son
 - Telefon: 0530 822 5006
 - Telefon E.164: +905308225006
 - WhatsApp: 905308225006
-- Geçici domain ve canonical: https://inci-oto-cekici.umutkaraytu.chatgpt.site
+- Geçici production domaini ve canonical: https://inciotocekici.vercel.app
 - Adres: Siyavuşpaşa Mahallesi, Kana Sokak No:14/3, Bahçelievler/İstanbul
 - Çalışma saati: Haftanın 7 günü, 24 saat
 - Dil: Türkçe (`tr`)
@@ -336,3 +336,4 @@ Bu ara tasarım, aşağıdaki endüstriyel-editoryal tasarım sistemiyle yeniden
 - Görsel üretim scripti favicon setini, ICO dosyasını ve paylaşım kartını tekrar üretilebilir biçimde güncellendi.
 - Doğrulanmamış koordinat meta etiketleri ve kesin varış süresi izlenimi oluşturan paylaşım açıklaması kaldırıldı.
 - `inciotocekici.com` alan adının farklı bir Erzurum işletmesine ait içerik sunduğu tespit edildi; yanlış canonical, sitemap, JSON-LD ve sosyal görsel adreslerini engellemek için tüm SEO adresleri geçici Sites alan adına taşındı.
+- Vercel deployment kimliği içeren korumalı bağlantının WhatsApp tarafından “Overview – Vercel” olarak önizlendiği tespit edildi. Canonical, Open Graph, Twitter/X, sitemap ve JSON-LD adresleri dışarıdan erişilebilen `https://inciotocekici.vercel.app` production alanına taşındı.

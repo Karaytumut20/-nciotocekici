@@ -51,10 +51,7 @@ test("ana sayfada tek H1, canonical ve yatay taşma yoktur", async ({ page }) =>
   await page.setViewportSize({ width: 360, height: 800 });
   await page.goto("/");
   await expect(page.locator("h1")).toHaveCount(1);
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
-    "href",
-    "https://inci-oto-cekici.umutkaraytu.chatgpt.site",
-  );
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://inciotocekici.vercel.app");
   const overflow = await page.evaluate(
     () => document.documentElement.scrollWidth > document.documentElement.clientWidth,
   );
@@ -84,10 +81,7 @@ test("SEO etiketleri, JSON-LD ve görsel alt metinleri geçerlidir", async ({ pa
   await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /İnci Oto Çekici/);
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /index, follow/);
   await expect(page.locator('meta[name="googlebot"]')).toHaveAttribute("content", /max-image-preview:large/);
-  await expect(page.locator('link[hreflang="tr-TR"]')).toHaveAttribute(
-    "href",
-    "https://inci-oto-cekici.umutkaraytu.chatgpt.site",
-  );
+  await expect(page.locator('link[hreflang="tr-TR"]')).toHaveAttribute("href", "https://inciotocekici.vercel.app");
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /inci-oto-cekici-paylasim\.png$/);
   await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
   await expect(page.locator('link[rel="icon"][href*="favicon.ico"]')).toHaveCount(1);
@@ -105,7 +99,7 @@ test("sitemap içindeki bütün URL’ler 200 döner", async ({ request }) => {
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
   expect(urls.length).toBeGreaterThan(40);
   for (const canonicalUrl of urls) {
-    const localUrl = canonicalUrl.replace("https://inci-oto-cekici.umutkaraytu.chatgpt.site", "http://localhost:3000");
+    const localUrl = canonicalUrl.replace("https://inciotocekici.vercel.app", "http://localhost:3000");
     const response = await request.get(localUrl);
     expect(response.status(), canonicalUrl).toBe(200);
   }

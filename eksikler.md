@@ -77,7 +77,7 @@ GOOGLE_SITE_VERIFICATION=
 
 ## 6. Canlı domain ve hosting işlemleri
 
-Site owner-only özel erişimle Sites üzerinde yayınlandı. Geçici yayın adresi `https://inci-oto-cekici.umutkaraytu.chatgpt.site` şeklindedir. Aşağıdaki maddeler işletmenin gerçek domainine geçiş için gereklidir.
+Site Vercel üzerinde dışarıdan erişilebilir şekilde yayınlandı. Paylaşılacak production adresi `https://inciotocekici.vercel.app` şeklindedir. Deployment kimliği içeren korumalı Vercel adresleri paylaşılmamalıdır; bu adresler dış ziyaretçileri Vercel giriş ekranına yönlendirir. Aşağıdaki maddeler işletmenin gerçek domainine geçiş için gereklidir.
 
 Yayın ortamında tamamlanması gerekenler:
 
