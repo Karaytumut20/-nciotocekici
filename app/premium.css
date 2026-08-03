@@ -124,7 +124,7 @@ summary {
   background: #fff;
 }
 
-.brand > span {
+.brand>span {
   font-family: var(--font-body), sans-serif;
   font-size: 0.9rem;
   font-weight: 800;
@@ -327,7 +327,7 @@ summary {
   text-shadow: none;
 }
 
-.hero-premium .hero-copy > p {
+.hero-premium .hero-copy>p {
   max-width: 670px;
   margin-top: 30px;
   color: #b7bfbc;
@@ -354,7 +354,7 @@ summary {
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.hero-proof > span {
+.hero-proof>span {
   min-width: 0;
   padding: 18px 18px 18px 0;
   display: flex;
@@ -364,7 +364,7 @@ summary {
   line-height: 1.45;
 }
 
-.hero-proof > span + span {
+.hero-proof>span+span {
   padding-left: 18px;
   border-left: 1px solid rgba(255, 255, 255, 0.16);
 }
@@ -483,7 +483,7 @@ summary {
   gap: 0;
 }
 
-.action-grid > a,
+.action-grid>a,
 .quick-action {
   min-height: 150px;
   padding: 30px 34px;
@@ -495,18 +495,18 @@ summary {
   box-shadow: none;
 }
 
-.action-grid > a:first-child {
+.action-grid>a:first-child {
   border-left: 1px solid rgba(17, 19, 21, 0.16);
 }
 
-.action-grid > a:hover {
+.action-grid>a:hover {
   background: #e7e6e0;
   border-color: rgba(17, 19, 21, 0.16);
   box-shadow: none;
   transform: none;
 }
 
-.action-grid > a > svg:first-child {
+.action-grid>a>svg:first-child {
   width: 30px;
   height: 30px;
   color: var(--signal);
@@ -530,7 +530,7 @@ summary {
   box-shadow: none;
 }
 
-.emergency-strip > .shell {
+.emergency-strip>.shell {
   padding-block: 26px;
 }
 
@@ -638,7 +638,7 @@ summary {
 
 .service-grid:not(.compact) .service-card:first-child h3,
 .service-grid:not(.compact) .service-card:first-child p,
-.service-grid:not(.compact) .service-card:first-child > span:last-child {
+.service-grid:not(.compact) .service-card:first-child>span:last-child {
   color: #fff;
 }
 
@@ -648,7 +648,7 @@ summary {
 
 .service-grid:not(.compact) .service-card:nth-child(6) h3,
 .service-grid:not(.compact) .service-card:nth-child(6) p,
-.service-grid:not(.compact) .service-card:nth-child(6) > span:last-child,
+.service-grid:not(.compact) .service-card:nth-child(6)>span:last-child,
 .service-grid:not(.compact) .service-card:nth-child(6) svg {
   color: #fff;
 }
@@ -718,7 +718,7 @@ summary {
   line-height: 1.7;
 }
 
-.service-card > span:last-child,
+.service-card>span:last-child,
 .text-link {
   color: var(--signal-dark);
   font-size: 0.72rem;
@@ -752,7 +752,7 @@ summary {
   border-bottom: 1px solid rgba(17, 19, 21, 0.2);
 }
 
-.steps > div {
+.steps>div {
   min-height: 280px;
   padding: 34px;
   border: 0;
@@ -762,11 +762,11 @@ summary {
   box-shadow: none;
 }
 
-.steps > div:first-child {
+.steps>div:first-child {
   border-left: 1px solid rgba(17, 19, 21, 0.2);
 }
 
-.steps > div > span {
+.steps>div>span {
   color: var(--signal);
   font-family: var(--font-heading), sans-serif;
   font-size: 4.4rem;
@@ -788,7 +788,7 @@ summary {
   border-top: 1px solid rgba(17, 19, 21, 0.18);
 }
 
-.location-grid > a {
+.location-grid>a {
   min-height: 132px;
   padding: 24px;
   border: 0;
@@ -800,21 +800,21 @@ summary {
   box-shadow: none;
 }
 
-.location-grid > a:hover {
+.location-grid>a:hover {
   background: #e7e6e0;
   border-color: rgba(17, 19, 21, 0.18);
   box-shadow: none;
   transform: none;
 }
 
-.location-grid > a.featured {
+.location-grid>a.featured {
   background: var(--signal);
   color: #fff;
 }
 
-.location-grid > a.featured h3,
-.location-grid > a.featured p,
-.location-grid > a.featured svg {
+.location-grid>a.featured h3,
+.location-grid>a.featured p,
+.location-grid>a.featured svg {
   color: #fff;
 }
 
@@ -849,7 +849,7 @@ summary {
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.road-grid > a,
+.road-grid>a,
 .road-card {
   min-height: 310px;
   padding: 30px;
@@ -860,13 +860,13 @@ summary {
   box-shadow: none;
 }
 
-.road-grid > a:hover,
+.road-grid>a:hover,
 .road-card:hover {
   background: #222628;
   transform: none;
 }
 
-.road-grid > a > span {
+.road-grid>a>span {
   color: var(--signal);
   font-family: var(--font-heading), sans-serif;
   font-size: 4rem;
@@ -897,8 +897,8 @@ summary {
 .info-card,
 .route-note,
 .address-callout,
-.contact-list > a,
-.contact-list > div {
+.contact-list>a,
+.contact-list>div {
   border: 1px solid rgba(17, 19, 21, 0.18);
   border-radius: 2px;
   background: var(--paper);
@@ -906,11 +906,86 @@ summary {
 }
 
 .contact-list small {
-  color: var(--steel);
+  color: #555e5b;
 }
 
 .contact-list strong {
   color: var(--ink);
+}
+
+/* High contrast text rules for detail pages and cards */
+.info-card,
+.warning-card,
+.route-note,
+.address-callout,
+.safety-box,
+.article-content,
+.article-aside,
+.legal-content {
+  color: #1a1e20;
+}
+
+.info-card h1, .info-card h2, .info-card h3, .info-card h4,
+.warning-card h1, .warning-card h2, .warning-card h3, .warning-card h4,
+.route-note strong, .address-callout strong, .address-callout h3,
+.safety-box h3, .safety-box h4 {
+  color: var(--ink);
+}
+
+.info-card p,
+.warning-card p,
+.route-note p,
+.address-callout p,
+.safety-box p,
+.article-content p,
+.article-aside p {
+  color: #2b302e;
+}
+
+.info-card ol,
+.info-card ul,
+.warning-card ol,
+.warning-card ul,
+.safety-box ol,
+.safety-box ul,
+.article-content ol,
+.article-content ul {
+  color: #1a1e20;
+}
+
+.info-card li,
+.warning-card li,
+.safety-box li,
+.article-content li,
+.article-aside li {
+  color: #1a1e20;
+  font-weight: 500;
+}
+
+.info-card ol li::marker,
+.warning-card ol li::marker,
+.safety-box ol li::marker,
+.article-content ol li::marker {
+  color: var(--signal);
+  font-weight: 700;
+}
+
+.check-list li {
+  color: #1a1e20;
+  font-weight: 500;
+}
+
+.breadcrumbs ol,
+.breadcrumbs li,
+.breadcrumbs a,
+.breadcrumb,
+.breadcrumb a {
+  color: #4a524f;
+}
+
+.breadcrumbs a:hover,
+.breadcrumb a:hover {
+  color: var(--signal);
 }
 
 .vehicle-panel {
@@ -926,7 +1001,7 @@ summary {
   color: #fff;
 }
 
-.vehicle-panel > div > span {
+.vehicle-panel>div>span {
   border-color: rgba(255, 255, 255, 0.32);
   background: rgba(255, 255, 255, 0.08);
 }
@@ -942,7 +1017,7 @@ summary {
   background: transparent;
 }
 
-.faq-item + .faq-item {
+.faq-item+.faq-item {
   border-top: 0;
 }
 
@@ -1114,8 +1189,8 @@ summary {
   border: 1px solid rgba(17, 19, 21, 0.18);
 }
 
-.pill-grid > span,
-.link-grid > a,
+.pill-grid>span,
+.link-grid>a,
 .location-list a,
 .article-related a {
   min-height: 66px;
@@ -1132,7 +1207,7 @@ summary {
   border: 1px solid rgba(17, 19, 21, 0.18);
 }
 
-.link-grid > a:hover,
+.link-grid>a:hover,
 .location-list a:hover,
 .article-related a:hover {
   background: #e7e6e0;
@@ -1344,9 +1419,11 @@ summary {
   0% {
     transform: translateX(-100%) scaleX(0.25);
   }
+
   55% {
     transform: translateX(0) scaleX(0.55);
   }
+
   100% {
     transform: translateX(100%) scaleX(0.35);
   }
@@ -1399,7 +1476,7 @@ summary {
     height: 48px;
   }
 
-  .brand > span {
+  .brand>span {
     font-size: 0.78rem;
   }
 
@@ -1435,7 +1512,7 @@ summary {
     font-size: clamp(3.7rem, 10.5vw, 5.7rem);
   }
 
-  .hero-premium .hero-copy > p {
+  .hero-premium .hero-copy>p {
     max-width: 620px;
   }
 
@@ -1457,8 +1534,8 @@ summary {
     grid-template-columns: 1fr;
   }
 
-  .action-grid > a,
-  .action-grid > a:first-child {
+  .action-grid>a,
+  .action-grid>a:first-child {
     min-height: 112px;
     border: 0;
     border-bottom: 1px solid rgba(17, 19, 21, 0.16);
@@ -1538,7 +1615,7 @@ summary {
     color: var(--ink);
   }
 
-  .drawer nav > a,
+  .drawer nav>a,
   .drawer summary {
     min-height: 52px;
     padding: 10px 2px;
@@ -1560,7 +1637,7 @@ summary {
     font-size: 0.78rem;
   }
 
-  .drawer > .button {
+  .drawer>.button {
     margin-top: auto;
   }
 
@@ -1583,6 +1660,7 @@ summary {
 }
 
 @media (max-width: 620px) {
+
   .shell,
   .hero-premium .hero-grid {
     width: min(100% - 28px, 1320px);
@@ -1592,7 +1670,7 @@ summary {
     display: none;
   }
 
-  .brand > span {
+  .brand>span {
     max-width: 120px;
     line-height: 1.05;
   }
@@ -1623,7 +1701,7 @@ summary {
     letter-spacing: -0.055em;
   }
 
-  .hero-premium .hero-copy > p {
+  .hero-premium .hero-copy>p {
     margin-top: 24px;
     font-size: 0.9rem;
     line-height: 1.72;
@@ -1645,14 +1723,14 @@ summary {
     grid-template-columns: 1fr;
   }
 
-  .hero-proof > span,
-  .hero-proof > span + span {
+  .hero-proof>span,
+  .hero-proof>span+span {
     padding: 12px 0;
     border-left: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-  .hero-proof > span:last-child {
+  .hero-proof>span:last-child {
     border-bottom: 0;
   }
 
@@ -1722,14 +1800,14 @@ summary {
     padding: 26px;
   }
 
-  .steps > div {
+  .steps>div {
     min-height: 230px;
     border-right: 1px solid rgba(17, 19, 21, 0.2);
     border-left: 1px solid rgba(17, 19, 21, 0.2);
     border-bottom: 1px solid rgba(17, 19, 21, 0.2);
   }
 
-  .steps > div + div {
+  .steps>div+div {
     border-top: 0;
   }
 
@@ -1737,8 +1815,8 @@ summary {
     grid-template-columns: 1fr;
   }
 
-  .location-grid > a,
-  .location-grid > a.featured {
+  .location-grid>a,
+  .location-grid>a.featured {
     grid-column: auto;
     border-left: 1px solid rgba(17, 19, 21, 0.18);
   }
@@ -1747,7 +1825,7 @@ summary {
     grid-template-columns: 1fr;
   }
 
-  .road-grid > a {
+  .road-grid>a {
     min-height: 250px;
   }
 
@@ -1776,6 +1854,7 @@ summary {
 }
 
 @media (max-width: 380px) {
+
   .shell,
   .hero-premium .hero-grid {
     width: min(100% - 22px, 1320px);
@@ -1786,7 +1865,7 @@ summary {
     height: 43px;
   }
 
-  .brand > span {
+  .brand>span {
     display: none;
   }
 
@@ -1801,6 +1880,7 @@ summary {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .drawer-backdrop,
   .drawer,
   .route-loader,
