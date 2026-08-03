@@ -1,10 +1,19 @@
 # İnci Oto Çekici — Eksikler ve Yayın Öncesi Gerekenler
 
-Son güncelleme: 2 Ağustos 2026
+Son güncelleme: 3 Ağustos 2026
 
 Kod, istenen sayfalar, SEO altyapısı ve otomatik testler tamamlandı. Aşağıdaki maddeler yazılımdaki yarım işler değil; kullanıcı tarafından verilmemiş, doğrulanması gereken işletme bilgileri veya canlı yayın sonrasında yapılabilen dış servis işlemleridir.
 
-Endüstriyel-editoryal UI/UX, tek Manrope font sistemi, yumuşak mobil menü, route loading sistemi ve ek teknik SEO çalışmaları tamamlandı. Bu yenileme yeni bir yazılım eksiği oluşturmadı. Arayüzde işletmeye ait gerçek hizmet fotoğrafları istenirse aşağıdaki gerçek çekici/ekip fotoğrafları sağlanmalıdır; işletmeye aitmiş gibi gösterilen yapay veya uydurma fotoğraf kullanılmadı.
+Endüstriyel-editoryal UI/UX, tek Manrope font sistemi, yumuşak mobil menü, route loading sistemi, favicon seti, 1200×630 link paylaşım görseli ve teknik SEO çalışmaları tamamlandı. Kod tarafında bilinen bir eksik kalmadı. Aşağıdaki maddeler işletmeden veya harici servislerden bilgi/işlem beklemektedir.
+
+## Tamamlanan son analiz maddeleri
+
+- Favicon için ICO, SVG, 16×16, 32×32, Apple 180×180 ve Android 192/512 px dosyaları hazırlandı.
+- Open Graph ve Twitter/X link paylaşım görseli gerçek 1200×630 PNG olarak bağlandı.
+- Daha önce `.png` uzantısıyla duran fakat gerçekte kare JPEG olan dosyalar metadata’dan çıkarıldı.
+- Doğrulanmamış koordinatlar metadata’dan kaldırıldı.
+- Doğrulanmamış kesin varış süresi iddiası paylaşım açıklamasından kaldırıldı.
+- İşletmeye ait gerçek hizmet fotoğrafları sağlanmadığı için sahte araç/ekip fotoğrafı kullanılmadı.
 
 Özel test yayını hazırdır: https://inci-oto-cekici.umutkaraytu.chatgpt.site
 

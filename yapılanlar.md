@@ -1,6 +1,6 @@
 # İnci Oto Çekici — Yapılanlar
 
-Son güncelleme: 2 Ağustos 2026
+Son güncelleme: 3 Ağustos 2026
 
 Özel test yayını: https://inci-oto-cekici.umutkaraytu.chatgpt.site
 
@@ -323,3 +323,15 @@ Bu ara tasarım, aşağıdaki endüstriyel-editoryal tasarım sistemiyle yeniden
 - Büyük hero ve iç sayfa başlıklarının ölçü, satır yüksekliği ve harf aralığı Manrope’un doğal genişliğine göre yeniden dengelendi.
 - 360–390 px mobil ekranlarda uzun başlıkların okunabilir ve taşmasız kalması için responsive boyutlar düşürüldü.
 - Tek font değişikliği sonrasında typecheck, lint, Prettier, production build ve 18/18 mobil/masaüstü Playwright testi yeniden başarılı oldu.
+
+## 21. Favicon ve link paylaşım görseli
+
+- Mevcut marka diliyle uyumlu, çekici silueti ve “İNCİ” yazısını taşıyan favicon görseli kullanıldı.
+- Gerçek PNG formatında 16×16, 32×32, 180×180, 192×192 ve 512×512 ikonlar üretildi.
+- Windows ve eski tarayıcı uyumluluğu için 16/32/48 px katmanlarını içeren gerçek `favicon.ico` oluşturuldu.
+- Apple touch icon ile Android normal/maskable manifest ikonları hazırlandı.
+- Favicon, shortcut icon, Apple icon ve web manifest bağlantıları metadata içinde açıkça tanımlandı.
+- WhatsApp, iMessage, Facebook, X ve diğer link önizlemeleri için 1200×630 gerçek PNG paylaşım kartı hazırlandı.
+- Open Graph ve Twitter/X metadata’sı aynı sürümlü paylaşım görseline merkezi olarak bağlandı.
+- Görsel üretim scripti favicon setini, ICO dosyasını ve paylaşım kartını tekrar üretilebilir biçimde güncellendi.
+- Doğrulanmamış koordinat meta etiketleri ve kesin varış süresi izlenimi oluşturan paylaşım açıklaması kaldırıldı.

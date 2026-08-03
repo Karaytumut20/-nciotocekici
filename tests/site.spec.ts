@@ -82,7 +82,9 @@ test("SEO etiketleri, JSON-LD ve görsel alt metinleri geçerlidir", async ({ pa
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /index, follow/);
   await expect(page.locator('meta[name="googlebot"]')).toHaveAttribute("content", /max-image-preview:large/);
   await expect(page.locator('link[hreflang="tr-TR"]')).toHaveAttribute("href", "https://inciotocekici.com");
-  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /inci-oto-cekici-og-v2\.png$/);
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /inci-oto-cekici-paylasim\.png$/);
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
+  await expect(page.locator('link[rel="icon"][href*="favicon.ico"]')).toHaveCount(1);
   const jsonLd = await page.locator('script[type="application/ld+json"]').allTextContents();
   expect(jsonLd.length).toBeGreaterThan(0);
   for (const block of jsonLd) expect(() => JSON.parse(block)).not.toThrow();
@@ -103,4 +105,16 @@ test("sitemap içindeki bütün URL’ler 200 döner", async ({ request }) => {
   }
   expect((await request.get("/robots.txt")).status()).toBe(200);
   expect((await request.get("/manifest.webmanifest")).status()).toBe(200);
+  for (const asset of [
+    "/favicon.ico",
+    "/favicon-16x16.png",
+    "/favicon-32x32.png",
+    "/apple-touch-icon.png",
+    "/android-chrome-192x192.png",
+    "/android-chrome-512x512.png",
+    "/images/social/inci-oto-cekici-paylasim.png",
+  ]) {
+    const response = await request.get(asset);
+    expect(response.status(), asset).toBe(200);
+  }
 });

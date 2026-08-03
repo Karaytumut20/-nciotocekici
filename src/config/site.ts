@@ -26,7 +26,7 @@ export const site = {
   whatsappMessage: "Merhaba İnci Oto Çekici, yol yardım hizmeti almak istiyorum. Konumum:",
   logo: "/images/brand/inci-oto-cekici-logo.webp",
   logoOriginal: "/images/brand/inci-oto-cekici-logo-original.png",
-  ogImage: "/images/social/inci-oto-cekici-og-v2.png",
+  ogImage: "/images/social/inci-oto-cekici-paylasim.png",
 } as const;
 
 export function whatsappUrl(message: string = site.whatsappMessage) {
