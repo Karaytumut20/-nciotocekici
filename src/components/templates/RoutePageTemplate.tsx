@@ -65,8 +65,10 @@ export function RoutePageTemplate({ page }: { page: RoutePage }) {
             </ul>
           </div>
           <aside className="warning-card">
-            <AlertTriangle />
-            <h3>Önce can güvenliği</h3>
+            <div className="warning-card-head">
+              <AlertTriangle />
+              <h3>Önce can güvenliği</h3>
+            </div>
             <p>{page.safety}</p>
           </aside>
         </div>
@@ -81,8 +83,12 @@ export function RoutePageTemplate({ page }: { page: RoutePage }) {
               const Icon = service.icon;
               return (
                 <Link className="service-card" key={service.slug} href={`/hizmetler/${service.slug}`}>
-                  <Icon />
-                  <h3>{service.title}</h3>
+                  <div className="service-card-head">
+                    <span className="icon-badge">
+                      <Icon />
+                    </span>
+                    <h3>{service.title}</h3>
+                  </div>
                   <p>{service.summary}</p>
                   <span>
                     İncele <ArrowRight />

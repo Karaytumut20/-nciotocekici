@@ -57,8 +57,10 @@ export function ServicePage({ service }: { service: Service }) {
             </ul>
           </div>
           <aside className="info-card">
-            <PhoneCall />
-            <h3>Hizmet nasıl alınır?</h3>
+            <div className="info-card-head">
+              <PhoneCall />
+              <h3>Hizmet nasıl alınır?</h3>
+            </div>
             <ol>
               <li>Telefonla arayın veya WhatsApp’tan konum gönderin.</li>
               <li>Araç ve arıza bilgisini paylaşın.</li>
@@ -121,8 +123,12 @@ export function ServicePage({ service }: { service: Service }) {
                 const RelatedIcon = item.icon;
                 return (
                   <Link className="service-card" key={item.slug} href={`/hizmetler/${item.slug}`}>
-                    <RelatedIcon />
-                    <h3>{item.title}</h3>
+                    <div className="service-card-head">
+                      <span className="icon-badge">
+                        <RelatedIcon />
+                      </span>
+                      <h3>{item.title}</h3>
+                    </div>
                     <p>{item.summary}</p>
                     <span>
                       Detayları incele <ArrowRight />

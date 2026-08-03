@@ -27,10 +27,12 @@ export default function ServicesIndex() {
             const Icon = service.icon;
             return (
               <Link className="service-card" key={service.slug} href={`/hizmetler/${service.slug}`}>
-                <span className="icon-badge">
-                  <Icon />
-                </span>
-                <h2>{service.title}</h2>
+                <div className="service-card-head">
+                  <span className="icon-badge">
+                    <Icon />
+                  </span>
+                  <h2>{service.title}</h2>
+                </div>
                 <p>{service.summary}</p>
                 <span>
                   Detayları incele <ArrowRight />

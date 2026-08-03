@@ -73,7 +73,8 @@ summary {
 }
 
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 200;
 }
 
@@ -161,6 +162,10 @@ summary {
   font-size: 0.72rem;
   font-weight: 750;
   letter-spacing: 0.025em;
+}
+
+.desktop-nav a::after {
+  display: none;
 }
 
 .desktop-nav a:hover,
@@ -669,6 +674,38 @@ summary {
   transform: none;
 }
 
+.service-card-head,
+.info-card-head,
+.warning-card-head,
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.service-card-head h2,
+.service-card-head h3,
+.info-card-head h3,
+.warning-card-head h3,
+.card-head h2,
+.card-head h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  line-height: 1.2;
+}
+
+.service-card-head .icon-badge,
+.service-card-head svg,
+.info-card-head svg,
+.warning-card-head svg,
+.card-head .icon-badge,
+.card-head svg {
+  margin-bottom: 0;
+  flex: 0 0 auto;
+}
+
 .service-card h3 {
   color: var(--ink);
   font-size: clamp(1.55rem, 2vw, 2rem);
@@ -798,21 +835,6 @@ summary {
   color: #fff;
 }
 
-.section-roads::before,
-.road-section::before {
-  content: "D100 / TEM / E-5";
-  position: absolute;
-  right: -0.03em;
-  bottom: -0.18em;
-  display: block;
-  color: transparent;
-  font-family: var(--font-heading), sans-serif;
-  font-size: clamp(5rem, 13vw, 13rem);
-  font-weight: 800;
-  white-space: nowrap;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.08);
-}
-
 .section-roads .section-heading h2,
 .section-roads .section-heading p,
 .section-roads .eyebrow {
@@ -881,6 +903,14 @@ summary {
   border-radius: 2px;
   background: var(--paper);
   box-shadow: none;
+}
+
+.contact-list small {
+  color: var(--steel);
+}
+
+.contact-list strong {
+  color: var(--ink);
 }
 
 .vehicle-panel {
@@ -1042,18 +1072,7 @@ summary {
 }
 
 .page-hero::before {
-  content: "INCI / 24";
-  position: absolute;
-  right: -0.03em;
-  bottom: -0.24em;
-  display: block;
-  color: transparent;
-  font-family: var(--font-heading), sans-serif;
-  font-size: clamp(8rem, 24vw, 23rem);
-  font-weight: 800;
-  line-height: 1;
-  white-space: nowrap;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  display: none;
 }
 
 .page-hero .shell {

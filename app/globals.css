@@ -212,23 +212,7 @@ p {
   white-space: nowrap;
 }
 .desktop-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 18px;
-  height: 2px;
-  background: var(--yellow);
-  transform: scaleX(0);
-  transition: transform 0.2s ease;
-}
-.desktop-nav a:hover,
-.desktop-nav a.active {
-  color: var(--white);
-}
-.desktop-nav a:hover::after,
-.desktop-nav a.active::after {
-  transform: scaleX(1);
+  display: none;
 }
 .nav-actions {
   display: flex;
@@ -628,6 +612,32 @@ p {
   transform: translateY(-6px);
   border-color: rgba(245, 180, 0, 0.48);
   box-shadow: 0 24px 46px rgba(2, 8, 15, 0.28);
+}
+.service-card-head,
+.info-card-head,
+.warning-card-head,
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.service-card-head h2,
+.service-card-head h3,
+.info-card-head h3,
+.warning-card-head h3,
+.card-head h2,
+.card-head h3 {
+  margin: 0;
+}
+.service-card-head .icon-badge,
+.service-card-head svg,
+.info-card-head svg,
+.warning-card-head svg,
+.card-head .icon-badge,
+.card-head svg {
+  margin-bottom: 0;
+  flex: 0 0 auto;
 }
 .icon-badge {
   width: 50px;

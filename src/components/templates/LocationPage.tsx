@@ -64,8 +64,10 @@ export function LocationPage({ location }: { location: Location }) {
             </div>
           </div>
           <aside className="info-card">
-            <ShieldCheck />
-            <h3>Güvenli konum paylaşımı</h3>
+            <div className="info-card-head">
+              <ShieldCheck />
+              <h3>Güvenli konum paylaşımı</h3>
+            </div>
             <p>
               Otoyol veya yoğun yoldaysanız yalnızca mahalle adını değil, seyir yönünü ve yakın çıkışı da iletin. Can
               güvenliği riski varsa önce 112’yi arayın.
@@ -96,8 +98,12 @@ export function LocationPage({ location }: { location: Location }) {
               const Icon = service.icon;
               return (
                 <Link className="service-card" key={service.slug} href={`/hizmetler/${service.slug}`}>
-                  <Icon />
-                  <h3>{service.title}</h3>
+                  <div className="service-card-head">
+                    <span className="icon-badge">
+                      <Icon />
+                    </span>
+                    <h3>{service.title}</h3>
+                  </div>
                   <p>{service.summary}</p>
                   <span>
                     Hizmete git <ArrowRight />

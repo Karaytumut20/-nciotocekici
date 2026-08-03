@@ -151,10 +151,12 @@ export default function Home() {
               const Icon = service.icon;
               return (
                 <Link className="service-card" key={service.slug} href={`/hizmetler/${service.slug}`}>
-                  <span className="icon-badge">
-                    <Icon />
-                  </span>
-                  <h3>{service.title}</h3>
+                  <div className="service-card-head">
+                    <span className="icon-badge">
+                      <Icon />
+                    </span>
+                    <h3>{service.title}</h3>
+                  </div>
                   <p>{service.summary}</p>
                   <span>
                     Hizmeti incele <ArrowRight />
