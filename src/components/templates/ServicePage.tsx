@@ -64,7 +64,7 @@ export function ServicePage({ service }: { service: Service }) {
             <ol>
               <li>Telefonla arayın veya WhatsApp’tan konum gönderin.</li>
               <li>Araç ve arıza bilgisini paylaşın.</li>
-              <li>Uygun destek ve süreç bilgisi görüşmede netleştirilsin.</li>
+              <li>Uygun destek ve süreç bilgisini birlikte netleştirelim.</li>
             </ol>
             <p>Tahmini varış ve işlem bilgisi, konum ve trafik durumuna göre paylaşılır.</p>
           </aside>

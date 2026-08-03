@@ -29,10 +29,7 @@ export default function Terms() {
         risk varsa 112’yi arayın.
       </p>
       <h2>İçerik güncellemeleri</h2>
-      <p>
-        İşletme bilgileri ve site içeriği gerektiğinde güncellenebilir. Bu metin yayın öncesinde işletmenin gerçek
-        uygulamalarına göre hukuk danışmanı tarafından kontrol edilmelidir.
-      </p>
+      <p>İşletme bilgileri, hizmet kapsamı ve site içeriği güncel koşullara göre gerektiğinde değiştirilebilir.</p>
     </LegalPage>
   );
 }

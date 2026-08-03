@@ -23,7 +23,7 @@ export default function Privacy() {
       <h2>İşlenen bilgiler</h2>
       <p>
         Site üzerinde doğrudan veri saklayan bir teklif formu bulunmaz. WhatsApp mesaj hazırlama alanına yazdığınız
-        bilgiler cihazınızda mesne dönüştürülür ve yalnızca WhatsApp’ı açmayı seçtiğinizde ilgili hizmete aktarılır.
+        bilgiler cihazınızda mesaja dönüştürülür ve yalnızca WhatsApp’ı açmayı seçtiğinizde ilgili hizmete aktarılır.
       </p>
       <h2>İletişim sırasında paylaşılan veriler</h2>
       <p>
@@ -32,8 +32,8 @@ export default function Privacy() {
       </p>
       <h2>Haklarınız</h2>
       <p>
-        6698 sayılı KVKK kapsamındaki talepleriniz için işletmeyle iletişime geçebilirsiniz. Ayrıntılı saklama ve imha
-        süreçleri işletmenin gerçek operasyonuna göre ayrıca hukuk danışmanı tarafından gözden geçirilmelidir.
+        6698 sayılı KVKK kapsamındaki bilgi, düzeltme ve silme talepleriniz için işletmeyle telefon üzerinden iletişime
+        geçebilirsiniz.
       </p>
       <p>
         <Link href="/cerez-politikasi">Çerez politikasını inceleyin.</Link>

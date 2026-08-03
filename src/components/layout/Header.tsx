@@ -151,7 +151,7 @@ export function Header() {
               </Link>
             ))}
             <details>
-              <summary>Hizmet kataloğu</summary>
+              <summary>Tüm hizmetler</summary>
               <div>
                 {services.map((item) => (
                   <Link key={item.slug} href={`/hizmetler/${item.slug}`} onClick={() => setOpen(false)}>

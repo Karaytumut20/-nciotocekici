@@ -18,7 +18,7 @@ export function Footer() {
             unoptimized
           />
           <h2>İnci Oto Çekici</h2>
-          <p>Bahçelievler merkezli 7/24 oto çekici, araç kurtarma ve yol yardım iletişimi.</p>
+          <p>Bahçelievler merkezli 7/24 oto çekici, araç kurtarma ve yol yardım hizmeti.</p>
         </div>
         <div>
           <h3>Hizmetler</h3>
@@ -61,7 +61,6 @@ export function Footer() {
           <Link href="/gizlilik-ve-kvkk">Gizlilik ve KVKK</Link>
           <Link href="/cerez-politikasi">Çerez Politikası</Link>
           <Link href="/kullanim-kosullari">Kullanım Koşulları</Link>
-          <Link href="/sitemap.xml">Sitemap</Link>
         </div>
       </div>
     </footer>

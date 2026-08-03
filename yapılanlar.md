@@ -337,3 +337,10 @@ Bu ara tasarım, aşağıdaki endüstriyel-editoryal tasarım sistemiyle yeniden
 - Doğrulanmamış koordinat meta etiketleri ve kesin varış süresi izlenimi oluşturan paylaşım açıklaması kaldırıldı.
 - `inciotocekici.com` alan adının farklı bir Erzurum işletmesine ait içerik sunduğu tespit edildi; yanlış canonical, sitemap, JSON-LD ve sosyal görsel adreslerini engellemek için tüm SEO adresleri geçici Sites alan adına taşındı.
 - Vercel deployment kimliği içeren korumalı bağlantının WhatsApp tarafından “Overview – Vercel” olarak önizlendiği tespit edildi. Canonical, Open Graph, Twitter/X, sitemap ve JSON-LD adresleri dışarıdan erişilebilen `https://inciotocekici.vercel.app` production alanına taşındı.
+
+## 22. Yayın öncesi kurumsal içerik temizliği
+
+- Footer içinde ziyaretçiye gösterilen `Sitemap` bağlantısı kaldırıldı; XML sitemap yalnızca arama motorları için teknik endpoint olarak korundu.
+- İngilizce “RECOVERY UNIT” etiketi Türkçe marka ifadesiyle değiştirildi.
+- Doğrulanmamış hizmet, eksik harita entegrasyonu ve yayın öncesi hukuk notları gibi iç ekip açıklamaları ziyaretçi arayüzünden kaldırıldı.
+- Mobil menü, süreç adımları, araç kapsamı, adres kartları ve yasal sayfalardaki mekanik ifadeler doğal ve kurumsal Türkçeyle güncellendi.

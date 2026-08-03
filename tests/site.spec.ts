@@ -90,6 +90,9 @@ test("SEO etiketleri, JSON-LD ve görsel alt metinleri geçerlidir", async ({ pa
   for (const block of jsonLd) expect(() => JSON.parse(block)).not.toThrow();
   const missingAlt = await page.locator("img:not([alt])").count();
   expect(missingAlt).toBe(0);
+  await expect(page.locator('footer a[href="/sitemap.xml"]')).toHaveCount(0);
+  await expect(page.getByText("RECOVERY UNIT")).toHaveCount(0);
+  await expect(page.getByText(/henüz eklenmedi|doğrulanmadığı için|yayın öncesinde/)).toHaveCount(0);
 });
 
 test("sitemap içindeki bütün URL’ler 200 döner", async ({ request }) => {

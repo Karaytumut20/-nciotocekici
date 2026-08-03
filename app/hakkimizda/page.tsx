@@ -38,7 +38,7 @@ export default function About() {
               </li>
               <li>
                 <CheckCircle2 />
-                Doğrulanamayan süre veya fiyat vaadi kullanmama
+                Konum ve trafik koşullarına göre açık bilgilendirme
               </li>
               <li>
                 <CheckCircle2 />
@@ -52,7 +52,7 @@ export default function About() {
             <div className="address-callout">
               <MapPin />
               <div>
-                <strong>Tek merkez adresimiz</strong>
+                <strong>Merkez adresimiz</strong>
                 <p>{site.address}</p>
               </div>
             </div>

@@ -80,7 +80,7 @@ export default function Home() {
               24
             </span>
             <div className="logo-card">
-              <span className="logo-card-label">İNCİ / RECOVERY UNIT / BAHÇELİEVLER</span>
+              <span className="logo-card-label">İNCİ OTO ÇEKİCİ • BAHÇELİEVLER • 7/24</span>
               <Image
                 src={site.logo}
                 alt="İnci Oto Çekici Bahçelievler 7/24 Yol Yardım"
@@ -191,7 +191,7 @@ export default function Home() {
             </div>
             <div>
               <span>03</span>
-              <h3>Uygun destek planlansın</h3>
+              <h3>Uygun desteği birlikte planlayalım</h3>
               <p>Tahmini varış ve işlem bilgisi, konum ve trafik durumuna göre görüşmede paylaşılır.</p>
             </div>
           </div>
@@ -257,7 +257,7 @@ export default function Home() {
               Neden İnci?
             </span>
             <h2>Doğrudan, açık ve konuma göre planlanan destek</h2>
-            <p>Doğrulanamayan süre ve fiyat vaatleri yerine, aracınızın gerçek durumuna göre bilgi veriyoruz.</p>
+            <p>Varış ve işlem bilgilerini aracınızın konumu, trafik ve taşıma koşullarına göre açıkça paylaşıyoruz.</p>
             <ul className="check-list">
               <li>
                 <CheckCircle2 />
@@ -301,7 +301,7 @@ export default function Home() {
                 Motosiklet
               </span>
             </div>
-            <p>Ağır vasıta hizmeti doğrulanmadığı için kapsamda gösterilmez.</p>
+            <p>Hizmet kapsamı, aracın ölçüsü ve taşıma koşulları görüşme sırasında netleştirilir.</p>
           </div>
         </div>
       </section>
@@ -346,12 +346,9 @@ export default function Home() {
             <div className="map-pin">
               <MapPin />
             </div>
-            <span>İşletme merkezi</span>
+            <span>Merkez adresimiz</span>
             <h3>Siyavuşpaşa, Bahçelievler</h3>
-            <p>
-              Doğrulanmış Google Maps embed bağlantısı henüz eklenmedi. Yol tarifi butonu adresi Google Maps aramasında
-              açar.
-            </p>
+            <p>Merkez adresimize ulaşmak için yol tarifi bağlantısını kullanabilirsiniz.</p>
             <DirectionsButton />
           </div>
         </div>

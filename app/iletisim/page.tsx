@@ -68,10 +68,7 @@ export default function Contact() {
             <MapPin />
           </div>
           <h2>Siyavuşpaşa, Bahçelievler</h2>
-          <p>
-            Google Maps işletme pini ve iframe bağlantısı henüz doğrulanmadı. Yol tarifi bağlantısı açık adresi Google
-            Maps aramasında açar.
-          </p>
+          <p>Merkez adresimize ulaşmak için yol tarifi bağlantısını kullanabilirsiniz.</p>
           <DirectionsButton />
         </div>
       </section>

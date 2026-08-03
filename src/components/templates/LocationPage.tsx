@@ -130,7 +130,7 @@ export function LocationPage({ location }: { location: Location }) {
           <div className="address-callout">
             <MapPin />
             <div>
-              <strong>Merkez işletme adresi</strong>
+              <strong>Merkez adresimiz</strong>
               <p>{site.address}</p>
             </div>
           </div>
