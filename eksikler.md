@@ -81,7 +81,7 @@ Site owner-only özel erişimle Sites üzerinde yayınlandı. Geçici yayın adr
 
 Yayın ortamında tamamlanması gerekenler:
 
-1. `inciotocekici.com` domainini seçilen hostinge bağlama
+1. `inciotocekici.com` şu anda Erzurum'daki farklı bir işletmenin sitesine yönleniyor; bu alan adı kullanılmamalı. İşletmeye ait yeni ve doğrulanmış bir alan adı seçilip hostinge bağlanmalı.
 2. HTTPS sertifikasını doğrulama
 3. HTTP → HTTPS yönlendirmesini canlıda test etme
 4. `www` → non-www yönlendirmesini canlıda test etme
@@ -93,7 +93,7 @@ Yayın ortamında tamamlanması gerekenler:
 
 1. Google Search Console domain mülkü oluşturun.
 2. `GOOGLE_SITE_VERIFICATION` değerini ekleyin.
-3. `https://inciotocekici.com/sitemap.xml` adresini gönderin.
+3. Yayına alınan doğrulanmış alan adının `/sitemap.xml` adresini gönderin.
 4. Ana sayfa için URL Inspection çalıştırın.
 5. Google İşletme Profili içindeki site bağlantısını güncelleyin.
 6. İşletme adı, adres ve telefonun siteyle birebir aynı olduğunu doğrulayın.
@@ -122,7 +122,7 @@ Bu değerler laboratuvar hedefidir; hosting, cihaz, ağ ve gerçek kullanıcı k
 Telefon bilgileri kullanıcı tarafından verildiği için hazırdır:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://inciotocekici.com
+NEXT_PUBLIC_SITE_URL=https://size-ait-dogrulanmis-alan-adi.example
 NEXT_PUBLIC_PHONE_DISPLAY=0530 822 5006
 NEXT_PUBLIC_PHONE_E164=+905308225006
 NEXT_PUBLIC_WHATSAPP_E164=905308225006

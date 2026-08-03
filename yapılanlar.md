@@ -24,7 +24,7 @@ Bu dosya, verilen ana proje promptuna göre tamamlanan işleri ve doğrulama son
 - Telefon: 0530 822 5006
 - Telefon E.164: +905308225006
 - WhatsApp: 905308225006
-- Domain ve canonical: https://inciotocekici.com
+- Geçici domain ve canonical: https://inci-oto-cekici.umutkaraytu.chatgpt.site
 - Adres: Siyavuşpaşa Mahallesi, Kana Sokak No:14/3, Bahçelievler/İstanbul
 - Çalışma saati: Haftanın 7 günü, 24 saat
 - Dil: Türkçe (`tr`)
@@ -209,7 +209,7 @@ E-5 ve D100 aynı sayfada birleştirildi. Her sayfada seyir yönü, yakın çık
 - Kamera, mikrofon ve konum izinlerini kapatan `Permissions-Policy`
 - `frame-ancestors 'none'` içeren Content Security Policy
 - CSP içinde `unsafe-eval` kullanılmadı.
-- `www.inciotocekici.com` → `inciotocekici.com` kalıcı yönlendirmesi
+- Doğrulanacak yeni alan adında `www` → kök alan adı kalıcı yönlendirmesi
 - Canlı domain için HTTP → HTTPS kalıcı yönlendirmesi
 - Gizli anahtar kullanılmadı; public değişkenler yalnızca istemciye açık olabilecek veriler için ayrıldı.
 
@@ -249,7 +249,7 @@ GA4 kimliği verilmediği için üçüncü taraf analiz scripti veya onaysız ç
 
 Canlı domain bağlandıktan sonra:
 
-1. [PageSpeed Insights](https://pagespeed.web.dev/) üzerinde `https://inciotocekici.com` mobil testi çalıştırılmalı.
+1. [PageSpeed Insights](https://pagespeed.web.dev/) üzerinde doğrulanmış canlı alan adının mobil testi çalıştırılmalı.
 2. [Rich Results Test](https://search.google.com/test/rich-results) ile ana sayfa, bir hizmet ve bir bölge sayfası kontrol edilmeli.
 3. Chrome Lighthouse ile mobil Performance, Accessibility, Best Practices ve SEO raporu alınmalı.
 4. Gerçek kullanıcı Core Web Vitals verisi Search Console’da izlenmeli.
@@ -275,7 +275,7 @@ Yayın öncesinde dışarıdan sağlanması gereken bilgiler ve doğrulamalar i�
 
 - Doğrulanmış production build, owner-only özel erişimle Sites üzerine yayınlandı.
 - Geçici yayın adresi: https://inci-oto-cekici.umutkaraytu.chatgpt.site
-- Canlı işletme domaini `inciotocekici.com` henüz DNS üzerinden bağlanmadı.
+- İşletmeye ait doğrulanmış özel alan adı henüz DNS üzerinden bağlanmadı.
 - Domain bağlantısı, Google Maps/İşletme Profili ve analiz doğrulamaları `eksikler.md` kontrol listesinde tutuluyor.
 
 ## 18. Açık tonlu UI/UX yenilemesi
@@ -335,3 +335,4 @@ Bu ara tasarım, aşağıdaki endüstriyel-editoryal tasarım sistemiyle yeniden
 - Open Graph ve Twitter/X metadata’sı aynı sürümlü paylaşım görseline merkezi olarak bağlandı.
 - Görsel üretim scripti favicon setini, ICO dosyasını ve paylaşım kartını tekrar üretilebilir biçimde güncellendi.
 - Doğrulanmamış koordinat meta etiketleri ve kesin varış süresi izlenimi oluşturan paylaşım açıklaması kaldırıldı.
+- `inciotocekici.com` alan adının farklı bir Erzurum işletmesine ait içerik sunduğu tespit edildi; yanlış canonical, sitemap, JSON-LD ve sosyal görsel adreslerini engellemek için tüm SEO adresleri geçici Sites alan adına taşındı.

@@ -2,7 +2,7 @@ export const site = {
   name: "İnci Oto Çekici",
   shortName: "İnci Çekici",
   description: "Bahçelievler ve çevresinde 7/24 oto çekici, oto kurtarma ve yol yardım hizmeti.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://inciotocekici.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://inci-oto-cekici.umutkaraytu.chatgpt.site",
   locale: "tr_TR",
   language: "tr",
   phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY || "0530 822 5006",
