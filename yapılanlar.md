@@ -231,7 +231,7 @@ GA4 kimliği verilmediği için üçüncü taraf analiz scripti veya onaysız ç
 - `npm run lint`: başarılı
 - `npm run build`: başarılı
 - Sunucu HTML testi: 2/2 başarılı
-- Playwright: 18/18 başarılı
+- Playwright: 20/20 başarılı
 - Mobil menü açma, ESC, focus trap ve focus geri dönüşü: başarılı
 - Mobil menünün yumuşak açılış ve kapanış animasyonu: başarılı
 - Route değişiminde loading, yeni sayfayı en üste alma ve geçişi tamamlama: başarılı
@@ -344,3 +344,13 @@ Bu ara tasarım, aşağıdaki endüstriyel-editoryal tasarım sistemiyle yeniden
 - İngilizce “RECOVERY UNIT” etiketi Türkçe marka ifadesiyle değiştirildi.
 - Doğrulanmamış hizmet, eksik harita entegrasyonu ve yayın öncesi hukuk notları gibi iç ekip açıklamaları ziyaretçi arayüzünden kaldırıldı.
 - Mobil menü, süreç adımları, araç kapsamı, adres kartları ve yasal sayfalardaki mekanik ifadeler doğal ve kurumsal Türkçeyle güncellendi.
+
+## 23. İç sayfa okunabilirlik ve kontrast düzeltmesi
+
+- Faydalı Bilgiler kartlarında açık zeminde neredeyse beyaz görünen açıklama metinlerinin tema değişkeni kaynaklı renk çakışması giderildi.
+- Açık yüzeylerdeki gövde, yardımcı, kart, form, yasal metin, FAQ ve erişim bilgisi renkleri siyah ve koyu kömür tonlarına taşındı.
+- İletişim sayfasındaki koyu konum kartının başlığı beyaza çevrildi.
+- Sinyal kırmızısı; beyaz CTA, üst bar ve öne çıkan kart metinleriyle WCAG AA kontrastını sağlayacak şekilde koyulaştırıldı.
+- Makale, hizmet, bölge, yol yardım, iletişim ve yasal sayfa şablonları gerçek tarayıcıda temsilî URL’lerle denetlendi.
+- Playwright testlerine açık ve koyu iç sayfa yüzeyleri için otomatik kontrast regresyon kontrolü eklendi.
+- Mobil ve masaüstü projelerinde toplam 20/20 Playwright testi başarılı oldu; tarayıcı kontrast taramasında 12 temsilî sayfanın hiçbirinde eşik altı metin kalmadı.

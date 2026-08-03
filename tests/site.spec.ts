@@ -2,6 +2,43 @@ import { expect, test } from "@playwright/test";
 
 const widths = [360, 390, 430, 768, 1024, 1280, 1440, 1920];
 
+async function textContrast(locator: import("@playwright/test").Locator) {
+  return locator.evaluate((element) => {
+    function rgb(value: string) {
+      const parts = value.match(/[\d.]+/g)?.map(Number) ?? [];
+      return parts.slice(0, 3);
+    }
+
+    function luminance([red, green, blue]: number[]) {
+      const channels = [red, green, blue].map((channel) => {
+        const normalized = channel / 255;
+        return normalized <= 0.04045 ? normalized / 12.92 : ((normalized + 0.055) / 1.055) ** 2.4;
+      });
+      return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
+    }
+
+    const foreground = rgb(getComputedStyle(element).color);
+    let current: Element | null = element;
+    let background = [255, 255, 255];
+    while (current) {
+      const style = getComputedStyle(current);
+      const color = rgb(style.backgroundColor);
+      const alpha = Number(style.backgroundColor.match(/[\d.]+/g)?.[3] ?? 1);
+      if (color.length === 3 && alpha > 0) {
+        background = color;
+        break;
+      }
+      current = current.parentElement;
+    }
+
+    const foregroundLuminance = luminance(foreground);
+    const backgroundLuminance = luminance(background);
+    const lighter = Math.max(foregroundLuminance, backgroundLuminance);
+    const darker = Math.min(foregroundLuminance, backgroundLuminance);
+    return (lighter + 0.05) / (darker + 0.05);
+  });
+}
+
 test("mobil menü açılır, ESC ile kapanır ve focus geri döner", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/", { waitUntil: "networkidle" });
@@ -93,6 +130,30 @@ test("SEO etiketleri, JSON-LD ve görsel alt metinleri geçerlidir", async ({ pa
   await expect(page.locator('footer a[href="/sitemap.xml"]')).toHaveCount(0);
   await expect(page.getByText("RECOVERY UNIT")).toHaveCount(0);
   await expect(page.getByText(/henüz eklenmedi|doğrulanmadığı için|yayın öncesinde/)).toHaveCount(0);
+});
+
+test("açık ve koyu iç sayfa yüzeylerinde metin kontrastı okunabilirdir", async ({ page }) => {
+  const checks = [
+    ["/", ".skip-link"],
+    ["/", ".footer h3"],
+    ["/faydali-bilgiler", ".article-grid p"],
+    ["/faydali-bilgiler/arac-yolda-kalinca-ne-yapilmali", ".article-content p"],
+    ["/hizmetler", ".service-card:first-child h2"],
+    ["/hizmetler", ".service-card:nth-child(6) h2"],
+    ["/hizmetler/oto-cekici", ".faq-list details p"],
+    ["/bolgeler/bahcelievler-oto-cekici", ".route-note span"],
+    ["/iletisim", ".privacy-note"],
+    ["/iletisim", ".whatsapp-form label span"],
+    ["/iletisim", ".map-card h2"],
+    ["/gizlilik-ve-kvkk", ".legal-content p"],
+  ] as const;
+
+  for (const [path, selector] of checks) {
+    await page.goto(path, { waitUntil: "domcontentloaded" });
+    const target = page.locator(selector).first();
+    await expect(target, `${path} ${selector}`).toHaveCount(1);
+    expect(await textContrast(target), `${path} ${selector} kontrast oranı`).toBeGreaterThanOrEqual(4.5);
+  }
 });
 
 test("sitemap içindeki bütün URL’ler 200 döner", async ({ request }) => {

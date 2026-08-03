@@ -15,6 +15,7 @@ Endüstriyel-editoryal UI/UX, tek Manrope font sistemi, yumuşak mobil menü, ro
 - Doğrulanmamış kesin varış süresi iddiası paylaşım açıklamasından kaldırıldı.
 - İşletmeye ait gerçek hizmet fotoğrafları sağlanmadığı için sahte araç/ekip fotoğrafı kullanılmadı.
 - Footer içindeki görünür sitemap bağlantısı ve ziyaretçiye yönelik olmayan yayın öncesi/teknik notlar kaldırıldı; XML sitemap arama motorları için çalışmaya devam ediyor.
+- Faydalı Bilgiler, makale, hizmet, bölge, yol yardım, iletişim ve yasal sayfalardaki soluk metinler okunabilir siyah/koyu kömür tonlarına taşındı; CTA ve koyu kart kontrastları düzeltildi.
 
 Özel test yayını hazırdır: https://inci-oto-cekici.umutkaraytu.chatgpt.site
 
