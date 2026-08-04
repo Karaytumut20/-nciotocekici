@@ -231,7 +231,7 @@ GA4 kimliği verilmediği için üçüncü taraf analiz scripti veya onaysız ç
 - `npm run lint`: başarılı
 - `npm run build`: başarılı
 - Sunucu HTML testi: 2/2 başarılı
-- Playwright: 20/20 başarılı
+- Playwright: 22/22 başarılı
 - Mobil menü açma, ESC, focus trap ve focus geri dönüşü: başarılı
 - Mobil menünün yumuşak açılış ve kapanış animasyonu: başarılı
 - Route değişiminde loading, yeni sayfayı en üste alma ve geçişi tamamlama: başarılı
@@ -354,3 +354,14 @@ Bu ara tasarım, aşağıdaki endüstriyel-editoryal tasarım sistemiyle yeniden
 - Makale, hizmet, bölge, yol yardım, iletişim ve yasal sayfa şablonları gerçek tarayıcıda temsilî URL’lerle denetlendi.
 - Playwright testlerine açık ve koyu iç sayfa yüzeyleri için otomatik kontrast regresyon kontrolü eklendi.
 - Mobil ve masaüstü projelerinde toplam 20/20 Playwright testi başarılı oldu; tarayıcı kontrast taramasında 12 temsilî sayfanın hiçbirinde eşik altı metin kalmadı.
+
+## 24. Google Ads etiketi ve izin yönetimi
+
+- Google Ads global site etiketi `AW-18367170805` kimliğiyle tüm sayfalara tek merkezden eklendi.
+- Google Consent Mode v2 kuruldu; reklam depolaması, reklam kullanıcı verisi ve reklam kişiselleştirmesi ilk açılışta reddedilmiş olarak başlar.
+- Ziyaretçinin “Kabul et” veya “Yalnızca gerekli” tercihini cihazında saklayan erişilebilir çerez tercih alanı eklendi.
+- Çerez politikası ve Gizlilik/KVKK metni gerçek reklam ölçümü davranışıyla eşleştirildi.
+- Google Tag Manager ve Google Ads istekleri için gerekli Content Security Policy kaynakları kontrollü biçimde açıldı.
+- Footer ve çerez politikası sayfasına tercihleri yeniden açma seçeneği eklendi.
+- Google Ads etiketinin tek yüklenmesi, doğru kimlik, varsayılan reddedilmiş izin ve tercih kaydı Playwright testiyle doğrulandı.
+- Google Ads değişikliği sonrasında mobil ve masaüstü projelerinde toplam 22/22 Playwright testi başarılı oldu.

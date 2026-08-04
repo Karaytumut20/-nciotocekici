@@ -4,6 +4,7 @@ import { Clock3, MapPin, Phone } from "lucide-react";
 import { site } from "@/src/config/site";
 import { services } from "@/src/data/services";
 import { locations } from "@/src/data/locations";
+import { CookiePreferencesButton } from "@/src/components/privacy/CookieConsent";
 
 export function Footer() {
   return (
@@ -60,6 +61,7 @@ export function Footer() {
         <div>
           <Link href="/gizlilik-ve-kvkk">Gizlilik ve KVKK</Link>
           <Link href="/cerez-politikasi">Çerez Politikası</Link>
+          <CookiePreferencesButton />
           <Link href="/kullanim-kosullari">Kullanım Koşulları</Link>
         </div>
       </div>

@@ -30,6 +30,12 @@ export default function Privacy() {
         Telefon veya WhatsApp üzerinden ad, konum, araç bilgisi ve hizmet ihtiyacı paylaşabilirsiniz. Bu bilgiler
         talebin değerlendirilmesi ve iletişim yürütülmesi amacıyla kullanılır.
       </p>
+      <h2>Google Ads ve izin tercihi</h2>
+      <p>
+        Reklam performansını ölçmek amacıyla Google Ads etiketi kullanılır. Reklam depolaması ve ilgili reklam izinleri
+        varsayılan olarak kapalıdır; yalnızca çerez tercih ekranında kabul etmeniz hâlinde etkinleştirilir. Tercihiniz
+        cihazınızdaki yerel depolama alanında tutulur ve çerez politikası sayfasından değiştirilebilir.
+      </p>
       <h2>Haklarınız</h2>
       <p>
         6698 sayılı KVKK kapsamındaki bilgi, düzeltme ve silme talepleriniz için işletmeyle telefon üzerinden iletişime

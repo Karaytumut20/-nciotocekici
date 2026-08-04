@@ -132,6 +132,46 @@ test("SEO etiketleri, JSON-LD ve görsel alt metinleri geçerlidir", async ({ pa
   await expect(page.getByText(/henüz eklenmedi|doğrulanmadığı için|yayın öncesinde/)).toHaveCount(0);
 });
 
+test("Google Ads etiketi izin varsayılanı reddedilmiş olarak tek kez yüklenir", async ({ page }) => {
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+  await expect(page.locator('script[src*="googletagmanager.com/gtag/js?id=AW-18367170805"]')).toHaveCount(1);
+
+  const initialCommands = await page.evaluate(() =>
+    (window.dataLayer ?? []).map((command) => Array.from(command as ArrayLike<unknown>)),
+  );
+  expect(initialCommands).toContainEqual([
+    "consent",
+    "default",
+    expect.objectContaining({
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+    }),
+  ]);
+  expect(initialCommands).toContainEqual(["config", "AW-18367170805"]);
+
+  const consent = page.getByRole("dialog", { name: "Reklam ölçümüne izin verir misiniz?" });
+  await expect(consent).toBeVisible();
+  await consent.getByRole("button", { name: "Kabul et" }).click();
+  await expect(consent).toBeHidden();
+
+  const savedConsent = await page.evaluate(() => window.localStorage.getItem("inci_cookie_consent_v1"));
+  expect(savedConsent).toBe("granted");
+
+  const updatedCommands = await page.evaluate(() =>
+    (window.dataLayer ?? []).map((command) => Array.from(command as ArrayLike<unknown>)),
+  );
+  expect(updatedCommands).toContainEqual([
+    "consent",
+    "update",
+    expect.objectContaining({
+      ad_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+    }),
+  ]);
+});
+
 test("açık ve koyu iç sayfa yüzeylerinde metin kontrastı okunabilirdir", async ({ page }) => {
   const checks = [
     ["/", ".skip-link"],
@@ -163,8 +203,8 @@ test("sitemap içindeki bütün URL’ler 200 döner", async ({ request }) => {
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
   expect(urls.length).toBeGreaterThan(40);
   for (const canonicalUrl of urls) {
-    const localUrl = canonicalUrl.replace("https://inciotocekici.vercel.app", "http://localhost:3000");
-    const response = await request.get(localUrl);
+    const canonical = new URL(canonicalUrl);
+    const response = await request.get(`${canonical.pathname}${canonical.search}`);
     expect(response.status(), canonicalUrl).toBe(200);
   }
   expect((await request.get("/robots.txt")).status()).toBe(200);

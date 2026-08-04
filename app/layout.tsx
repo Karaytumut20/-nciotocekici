@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import "./premium.css";
 import { site } from "@/src/config/site";
@@ -7,6 +8,7 @@ import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
 import { MobileCta } from "@/src/components/layout/MobileCta";
 import { RouteExperience } from "@/src/components/layout/RouteExperience";
+import { CookieConsent } from "@/src/components/privacy/CookieConsent";
 
 const body = Manrope({
   variable: "--font-body",
@@ -112,8 +114,42 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const googleAdsId = JSON.stringify(site.googleAdsId);
+
   return (
     <html lang="tr">
+      <head>
+        <Script id="google-ads-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+            var inciConsent = null;
+            try { inciConsent = window.localStorage.getItem('inci_cookie_consent_v1'); } catch (error) {}
+            var inciAdConsent = inciConsent === 'granted' ? 'granted' : 'denied';
+            window.gtag('consent', 'default', {
+              ad_storage: inciAdConsent,
+              ad_user_data: inciAdConsent,
+              ad_personalization: inciAdConsent,
+              analytics_storage: 'denied',
+              wait_for_update: 500
+            });
+            window.gtag('set', 'ads_data_redaction', true);
+            window.gtag('set', 'url_passthrough', true);
+          `}
+        </Script>
+        <Script
+          id="google-ads-library"
+          src={`https://www.googletagmanager.com/gtag/js?id=${site.googleAdsId}`}
+          strategy="afterInteractive"
+          async
+        />
+        <Script id="google-ads-config" strategy="afterInteractive">
+          {`
+            window.gtag('js', new Date());
+            window.gtag('config', ${googleAdsId});
+          `}
+        </Script>
+      </head>
       <body className={body.variable}>
         <a className="skip-link" href="#main-content">
           Ana içeriğe geç
@@ -124,6 +160,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Footer />
           <MobileCta />
         </RouteExperience>
+        <CookieConsent />
       </body>
     </html>
   );

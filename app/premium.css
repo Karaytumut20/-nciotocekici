@@ -1315,6 +1315,83 @@ summary {
   border-top-color: rgba(255, 255, 255, 0.14);
 }
 
+.cookie-consent {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 1500;
+  width: min(calc(100% - 48px), 580px);
+  padding: 24px;
+  display: grid;
+  gap: 20px;
+  border: 1px solid rgba(17, 19, 21, 0.22);
+  background: var(--porcelain);
+  color: var(--ink);
+  box-shadow: 0 22px 70px rgba(17, 19, 21, 0.24);
+}
+
+.cookie-consent span {
+  color: var(--signal-dark);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cookie-consent h2 {
+  margin-top: 6px;
+  color: var(--ink);
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  line-height: 1.15;
+}
+
+.cookie-consent p {
+  margin-top: 10px;
+  color: var(--ink);
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+
+.cookie-consent p a {
+  color: var(--signal-dark);
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cookie-consent-actions .button {
+  min-height: 46px;
+  padding: 10px 15px;
+}
+
+.cookie-preferences-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-content > .cookie-preferences-button {
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .floating-actions a {
   border: 3px solid var(--paper);
   box-shadow: 0 10px 30px rgba(17, 19, 21, 0.22);
@@ -1461,6 +1538,23 @@ summary {
 }
 
 @media (max-width: 900px) {
+  .cookie-consent {
+    left: 12px;
+    bottom: calc(78px + env(safe-area-inset-bottom));
+    width: calc(100% - 24px);
+    padding: 18px;
+  }
+
+  .cookie-consent-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cookie-consent-actions .button {
+    width: 100%;
+    font-size: 0.68rem;
+  }
+
   body {
     padding-bottom: calc(70px + env(safe-area-inset-bottom));
   }

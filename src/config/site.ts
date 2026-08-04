@@ -21,6 +21,7 @@ export const site = {
   instagramUrl: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "",
   // TODO(yayın öncesi): Consent yapısı etkinleştirildiğinde GA4 kimliğini ekleyin.
   gaId: process.env.NEXT_PUBLIC_GA_ID || "",
+  googleAdsId: process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18367170805",
   // TODO(yayın öncesi): Search Console doğrulama kodunu ekleyin.
   googleVerification: process.env.GOOGLE_SITE_VERIFICATION || "",
   whatsappMessage: "Merhaba İnci Oto Çekici, yol yardım hizmeti almak istiyorum. Konumum:",

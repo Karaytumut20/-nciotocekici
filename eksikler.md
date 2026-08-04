@@ -54,8 +54,9 @@ NEXT_PUBLIC_INSTAGRAM_URL=
 
 - GA4 Measurement ID verilmedi.
 - Google Search Console doğrulama kodu verilmedi.
-- Analytics varsayılan olarak kapalıdır; kullanıcı onayı olmadan analiz scripti çalışmaz.
-- GA4 etkinleştirilecekse gerçek consent mode/çerez tercih arayüzü, güncel çerez politikasıyla birlikte devreye alınmalıdır.
+- Google Ads global site etiketi `AW-18367170805` kimliğiyle ve Consent Mode v2 ile kuruldu.
+- Reklam depolaması kullanıcı açıkça kabul etmeden etkinleşmez; çerez tercih arayüzü ve güncel bilgilendirme metinleri hazırdır.
+- Google Ads içinde telefon araması veya WhatsApp tıklaması için oluşturulacak dönüşüm eyleminin `send_to` etiketi henüz verilmedi. Bu etiket sağlandığında ilgili CTA olaylarına bağlanmalıdır.
 
 Doldurulacak alanlar:
 
