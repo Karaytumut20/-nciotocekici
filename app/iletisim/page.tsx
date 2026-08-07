@@ -64,12 +64,27 @@ export default function Contact() {
       </section>
       <section className="section section-muted">
         <div className="shell map-card wide">
-          <div className="map-pin">
-            <MapPin />
-          </div>
-          <h2>Siyavuşpaşa, Bahçelievler</h2>
-          <p>Merkez adresimize ulaşmak için yol tarifi bağlantısını kullanabilirsiniz.</p>
-          <DirectionsButton />
+          {site.mapsEmbedUrl ? (
+            <iframe
+              src={site.mapsEmbedUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: 400, borderRadius: "inherit" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="İnci Oto Çekici Harita Konumu"
+            />
+          ) : (
+            <>
+              <div className="map-pin">
+                <MapPin />
+              </div>
+              <h2>Siyavuşpaşa, Bahçelievler</h2>
+              <p>Merkez adresimize ulaşmak için yol tarifi bağlantısını kullanabilirsiniz.</p>
+              <DirectionsButton />
+            </>
+          )}
         </div>
       </section>
     </>

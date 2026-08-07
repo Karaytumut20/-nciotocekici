@@ -343,13 +343,28 @@ export default function Home() {
             </div>
           </div>
           <div className="map-card">
-            <div className="map-pin">
-              <MapPin />
-            </div>
-            <span>Merkez adresimiz</span>
-            <h3>Siyavuşpaşa, Bahçelievler</h3>
-            <p>Merkez adresimize ulaşmak için yol tarifi bağlantısını kullanabilirsiniz.</p>
-            <DirectionsButton />
+            {site.mapsEmbedUrl ? (
+              <iframe
+                src={site.mapsEmbedUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: 300, borderRadius: "inherit" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="İnci Oto Çekici Harita Konumu"
+              />
+            ) : (
+              <>
+                <div className="map-pin">
+                  <MapPin />
+                </div>
+                <span>Merkez adresimiz</span>
+                <h3>Siyavuşpaşa, Bahçelievler</h3>
+                <p>Merkez adresimize ulaşmak için yol tarifi bağlantısını kullanabilirsiniz.</p>
+                <DirectionsButton />
+              </>
+            )}
           </div>
         </div>
       </section>

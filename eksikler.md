@@ -21,8 +21,8 @@ Endüstriyel-editoryal UI/UX, tek Manrope font sistemi, yumuşak mobil menü, ro
 
 ## 1. Doğrulanmış işletme ve harita bilgileri
 
-- Google Maps işletme/pin bağlantısı verilmedi.
-- Google Maps embed bağlantısı verilmedi.
+- [x] Google Maps işletme/pin bağlantısı verildi.
+- [x] Google Maps embed bağlantısı eklendi.
 - Google İşletme Profili bağlantısı verilmedi.
 - Enlem/boylam koordinatları doğrulanmadı; bu nedenle JSON-LD içinde `geo` kullanılmadı.
 - Posta kodu doğrulanmadı; bu nedenle şema adresine eklenmedi.
@@ -31,12 +31,10 @@ Endüstriyel-editoryal UI/UX, tek Manrope font sistemi, yumuşak mobil menü, ro
 Bu bilgiler geldiğinde doldurulacak değişkenler:
 
 ```env
-NEXT_PUBLIC_GOOGLE_MAPS_URL=
-NEXT_PUBLIC_GOOGLE_MAPS_EMBED_URL=
 NEXT_PUBLIC_GOOGLE_BUSINESS_URL=
 ```
 
-Doğrulanmış Maps URL’si gelene kadar site, açık adresi Google Maps aramasında açan güvenli yol tarifi bağlantısı ve bozuk iframe yerine konum kartı kullanır.
+Site artık sağlanan Google Maps bağlantısını kullanarak iframe ve yol tarifi bağlantılarını göstermektedir.
 
 ## 2. Sosyal medya
 

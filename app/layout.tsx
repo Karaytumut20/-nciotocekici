@@ -8,7 +8,7 @@ import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
 import { MobileCta } from "@/src/components/layout/MobileCta";
 import { RouteExperience } from "@/src/components/layout/RouteExperience";
-import { CookieConsent } from "@/src/components/privacy/CookieConsent";
+
 
 const body = Manrope({
   variable: "--font-body",
@@ -160,7 +160,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Footer />
           <MobileCta />
         </RouteExperience>
-        <CookieConsent />
       </body>
     </html>
   );
